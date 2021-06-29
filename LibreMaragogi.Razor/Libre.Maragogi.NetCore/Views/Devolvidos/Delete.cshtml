@@ -1,0 +1,30 @@
+﻿@model EmprestimoVw
+
+@{
+    Layout = "_LayoutPanel";
+}
+
+<link href="~/css/global/create-edit.css" rel="stylesheet" />
+
+@{
+    if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+}
+
+<div class="header-table">
+    <div class="wrapper-content-title">
+        <i class="fa fa-file"></i>
+        <h6>Deletar Devolução - @Model.Usuario - @Model.Cpf - @Model.Livro</h6>
+    </div>
+</div>
+
+<div id="title-table-divisor" class="divisor"></div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="EmprestimosId" />
+    <input type="submit" value="Deletar" class="btn-submit" />
+</form>

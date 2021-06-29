@@ -1,0 +1,55 @@
+﻿@model Emprestimo
+
+@{
+    Layout = "_LayoutPanel";
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<link href="~/css/global/create-edit.css" rel="stylesheet" />
+
+<div class="header-table">
+    <div class="wrapper-content-title">
+        <i class="fa fa-file"></i>
+        <h6>Novo Devolução</h6>
+    </div>
+</div>
+
+<div id="title-table-divisor" class="divisor"></div>
+
+<form asp-action="Create">
+    <div>
+        <label>Selecione um Usuário</label>
+        <select id="usuarios" class="form-control" asp-items="@ViewBag.Usuarios" asp-for="UsuariosId">
+            <option></option>
+        </select>
+    </div>
+
+
+    <div id="div-livros">
+        <label>Selecione um Livro</label>
+        <select id="livros" class="form-control" asp-for="Livros" multiple>
+            <option></option>
+        </select>
+    </div>
+
+    <div class="datas">
+        <div>
+            <label>Data da Devolução</label>
+            <input type="date" asp-for="DtDevolucao" class="form-control" />
+        </div>
+    </div>
+
+    <div class="div-observacao">
+        <label>Observações</label>
+        <textarea asp-for="Observacao"></textarea>
+    </div>
+
+    <div>
+        <input type="submit" class="btn-submit" value="Cadastrar" />
+    </div>
+</form>
+
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="~/js/Devolucao.js"></script>

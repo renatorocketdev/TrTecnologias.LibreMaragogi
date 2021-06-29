@@ -1,0 +1,65 @@
+﻿@model List<EmprestimoVw>
+
+@{
+    Layout = "_LayoutPanel";
+}
+
+<link href="~/css/global/lists.css" rel="stylesheet" />
+
+<div class="header-table">
+    <div class="wrapper-content-title">
+        <i class="fa fa-file"></i>
+        <h6>Empréstimos</h6>
+    </div>
+</div>
+
+<div id="title-table-divisor" class="divisor"></div>
+
+<form asp-action="Index">
+    <div class="select-container">
+        <div class="wrapper-content-search">
+            <div class="container-1">
+                <input type="search" id="search" placeholder="Pesquisar um livro..." />
+                <button class="btn-search"><i id="btn-search-icon" class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Usuário</th>
+            <th scope="col">Livro</th>
+            <th scope="col">Data Empréstimo</th>
+            <th scope="col">Data Devolução</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var emprestimo in Model)
+            {
+                <tr>
+                    <td>@emprestimo.EmprestimosId</td>
+                    <td>@emprestimo.Usuario</td>
+                    <td>@emprestimo.Livro</td>
+                    <td>@emprestimo.DtEmprestimo.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        @{
+                            if (emprestimo.DtDevolucao.HasValue)
+                            {
+                                <span>@emprestimo.DtDevolucao.Value.ToString("dd/MM/yyyy")</span>
+                            }
+                        }
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@emprestimo.EmprestimosId"><i class="fas fa-pen"></i></a>
+                        <a asp-action="Delete" asp-route-id="@emprestimo.EmprestimosId"><i class="fas fa-minus"></i></a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

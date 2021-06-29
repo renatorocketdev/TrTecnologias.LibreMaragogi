@@ -1,0 +1,51 @@
+﻿@model Usuario
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/css/Registrar.css">
+
+</head>
+<body>
+    <section class="content">
+        <div class="apresentacao">
+            <img src="~/assets/logo.png" />
+        </div>
+        <div class="container registrar">
+            <h3 class="container">Registrar</h3>
+            <form asp-action="Registrar" method="POST">
+                <input asp-for="Nome" type="text" placeholder="Nome">
+                <div>
+                    <input asp-for="Nascimento" type="date">
+                    <input asp-for="Cpf" type="text" placeholder="CPF" class="cpf">
+                    <input asp-for="Telefone" type="text" placeholder="Telefone" class="telefone">
+                </div>
+
+                <div>
+                    <input asp-for="Cep" type="text" placeholder="CEP" class="cep">
+                    <input asp-for="Numero" type="text" placeholder="Número">
+                </div>
+
+                <input asp-for="Logradouro" type="text" placeholder="Logradouro">
+                <input asp-for="Email" type="email" placeholder="Email">
+                <input asp-for="Senha" type="password" placeholder="Senha">
+                <input asp-for="Role" value="Comum" type="text" hidden>
+                <input type="submit" value="Registrar" class="submit">
+            </form>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous"></script>
+    <script src="~/js/registrar.js"></script>
+</body>
+</html>

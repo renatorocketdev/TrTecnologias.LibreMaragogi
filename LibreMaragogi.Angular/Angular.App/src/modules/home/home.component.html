@@ -1,0 +1,172 @@
+  <!--#region home code  -->
+    <div class="container">
+      <div class="nav-content">
+        <nav>
+          <img class="logo-header" alt="logo" src="../../assets/logobranca.png">
+  
+          <ul>
+            <li id="icon-menu-title" class="welcome-nav-li"><a>Menu</a></li>           
+            <li class="welcome-nav-li"><a href="#">Ínicio</a></li>           
+            <li class="welcome-nav-li"><a href="#">Catálogo</a></li>           
+            <li class="welcome-nav-li"><a href="#">Contato</a></li>           
+            <li class="welcome-nav-li"><a href="#">Sobre</a></li>           
+         
+            <li id="icon-menu" class="welcome-nav-li" onclick="mobileMenu"><i class="fa fa-bars"></i></li>           
+          </ul>    
+        </nav>
+  
+        <div class="nav-buttons">
+          <button class="btn" type="submit"><i class="fa fa-facebook"></i>Facebook</button>
+          <button id="second-btn-active" class="btn" type="submit"><i class="fa fa-instagram"></i>Instagram</button>
+        </div>
+      </div>
+
+      <div class="text-presentation">
+        <h2>Governo Municipal de Maragogi</h2>
+        <h4>Confira nosso acervo de livros disponíveis para você alugar
+          a hora que quiser.</h4>
+
+          <div class="text-presentation-button">
+            <button id="btn-active" class="btn-presentation" type="submit" routerLink="/login">Acessar</button>
+            <button class="btn-presentation" type="submit" routerLink="registrar">Criar Conta</button>
+          </div>          
+      </div>
+
+      <div class="arrow-down">
+        <a><i class="fa fa-chevron-down"></i></a>
+      </div>
+    </div>
+
+    <div class="container-2">
+      <div class="card-container">
+        <div class="card-title">
+          <i id="icon-title" class="fa fa-facebook"></i>
+
+          <h3>EASILY CUSTOMISED</h3>
+
+          <p>Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Etiam purus tortor, 
+            sagittis in arcu nec, malesuada gravida lacus. 
+            Donec sit amet malesuada tellus, 
+            quis bibendum odio.</p>
+        </div>              
+      </div>    
+      
+      <div class="card-container">
+        <div class="card-title">
+          <i id="icon-title" class="fa fa-facebook"></i>
+
+          <h3>EASILY CUSTOMISED</h3>
+
+          <p>Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Etiam purus tortor, 
+            sagittis in arcu nec, malesuada gravida lacus. 
+            Donec sit amet malesuada tellus, 
+            quis bibendum odio.</p>
+        </div>              
+      </div>  
+      
+      <div class="card-container">
+        <div class="card-title">
+          <i id="icon-title" class="fa fa-facebook"></i>
+
+          <h3>EASILY CUSTOMISED</h3>
+
+          <p>Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Etiam purus tortor, 
+            sagittis in arcu nec, malesuada gravida lacus. 
+            Donec sit amet malesuada tellus, 
+            quis bibendum odio.</p>
+        </div>              
+      </div>  
+    </div>
+    
+  <footer>                
+    <div class="right-side-footer">
+      <div class="contact-us">
+        <h4>Desenvolvido por</h4>
+        <p>Website desenvolvido pela empresa <a href="https://trtecnologias.com.br/" target="about_blank">TR Tecnologias</a></p>
+
+        <p>
+          Programado por <br> 
+          <i class="fa fa-github"></i>
+          <a href="https://github.com/renatorocketdev" target="about_blank">Renato Alves</a>
+        </p>
+
+        <p>
+          Design por <br> 
+          <i class="fa fa-github"></i>
+          <a href="https://github.com/CaioSales123" target="about_blank">Caio Sales</a>
+        </p>
+      </div>
+    </div>  
+    
+    <h3>© 2021 - Governo do Estado de Alagoas. Todos os direitos reservados.</h3>
+  </footer>
+
+  <!--#endregion -->
+  
+  <!--#region popup  -->
+<!--
+  <div class="bg-modal">
+    <div class="container-popup">
+      <div class="left-side">
+        <h3>General Information</h3>
+
+        <input class="input-style" type="text" placeholder="Título...">
+        <input class="input-style" type="text" placeholder="Autor...">
+
+        <div class="two-fields-row">
+          <select>      
+            <option>Categoria I</option>      
+            <option value="Categoria1">Categoria 1</option>
+          </select>
+          <input class="input-style" type="text" placeholder="Caterogia II...">
+        </div>
+
+        <select>      
+          <option>Ano de Lançamento</option>      
+          <option value="2019">2019</option>          
+        </select>
+
+        <input class="input-style" type="text" placeholder="Exemplares...">
+
+        <div class="two-fields-row">
+          <input class="input-style" type="text" placeholder="Editora...">
+
+          <select>      
+            <option>Classificação</option>      
+            <option value="Assunto1">Assunto 1</option>
+            <option value="Assunto2">Assunto 2</option>
+            <option value="Titulo">Título</option>
+            <option value="Autor">Autor</option>
+            <option value="Tombo">Tombo</option>
+            <option value="Serie">Serie</option>
+          </select>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Pellentesque orci turpis, imperdiet sed lacus eget.</p>
+      </div>
+
+      <div class="right-side">
+        <h3>Contact Details</h3>
+
+        <input class="input-style" type="text" placeholder="Serie...">
+        <input class="input-style" type="text" placeholder="Tombo...">
+
+        <input class="input-style" type="text" placeholder="Volume...">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Pellentesque orci turpis, imperdiet sed lacus eget.</p>
+
+        <button class="btn"  type="submit"><i class="fa fa-save"></i>Salvar</button>
+      </div>
+
+      <a>
+        <i id="icon-close" class="fa fa-times"></i>
+      </a>
+    </div>
+  </div>
+-->
+  <!--#endregion -->

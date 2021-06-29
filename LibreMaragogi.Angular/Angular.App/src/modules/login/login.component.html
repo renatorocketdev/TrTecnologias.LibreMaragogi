@@ -1,0 +1,31 @@
+<div class="content">
+    <div class="container">
+        <h3>Olá, seja bem-vindo.</h3>
+        <form (ngSubmit)="login()">
+            <label>CPF</label>
+
+            <i id="input-icon" class="fa fa-file-text"></i>
+            <input type="text" placeholder="Digite seu CPF..."
+            maxlength="11" [(ngModel)]="user" name="user">
+            
+            <label>Senha</label>
+
+            <i id="input-icon" class="fa fa-lock"></i>
+          
+            <input type="password" placeholder="Digite sua senha..."
+            maxlength="25" [(ngModel)]="pwd" name="pwd">
+
+            <a href="#">Esqueceu sua senha?</a>
+            <div class="container-button">
+                <button class="btn-form" onclick="onSubmit()" value="Entrar" formaction="#">Acessar</button>
+            </div>
+
+            <label class="center-label">Novo por aqui?</label>
+            <div class="container-signup">
+              <button class="btn-form-signup" type="submit" value="Registrar" routerLink="registrar">
+                Crie uma conta
+              </button>
+            </div>
+        </form>
+    </div>
+</div>

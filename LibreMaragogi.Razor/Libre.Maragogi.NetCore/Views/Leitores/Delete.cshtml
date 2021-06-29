@@ -1,0 +1,30 @@
+﻿@model Usuario
+
+@{
+    Layout = "_LayoutPanel";
+}
+
+<link href="~/css/global/create-edit.css" rel="stylesheet" />
+
+@{
+    if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+}
+
+<div class="header-table">
+    <div class="wrapper-content-title">
+        <i class="fa fa-user"></i>
+        <h6>Deletar Emprestimo - @Model.Nome - @Model.Cpf</h6>
+    </div>
+</div>
+
+<div id="title-table-divisor" class="divisor"></div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="UsuariosId" />
+    <input type="submit" value="Deletar" class="btn-submit" />
+</form>

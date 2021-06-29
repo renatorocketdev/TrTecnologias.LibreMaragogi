@@ -1,0 +1,698 @@
+html, body {
+    background-color: #fff  !important;
+}
+
+/*#region Home Css*/
+
+.container {
+    background-image: url('../../assets/bg.jpg');
+    background-size: cover;
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+}
+
+.nav-content {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 50px 0 50px;
+    border-bottom: 1px solid #eeeeee1f;
+}
+
+.logo-header {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 5px;
+    padding: 1px
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+nav ul li a {
+    font-family: Nunito;
+    font-weight: 500;
+    margin: 10px;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+#icon-menu {
+    display: none;
+}
+
+#icon-menu-title {
+    display: none;
+}
+
+nav ul li:nth-child(2) {
+    border: none;
+}
+
+nav ul li:hover {
+    border: none;
+    background-color: transparent;
+}
+
+nav ul li:hover a {
+    background-color: transparent;
+    font-weight: 800;
+    color: #0079bd;
+    border: none;
+}
+
+.nav-buttons {
+    min-width: 200px;
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    padding: 60px 0 60px 0;
+    align-content: center;
+    align-items: center;
+}
+
+.btn {
+    font-family: Nunito;
+    font-weight: 800;
+    letter-spacing: 1px;
+    width: 45%;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 30px;
+    transition: 0.3s;
+    height: 52px;
+    
+}
+
+.btn:hover,  .btn:hover i {
+    background-color: #fff;
+    color: #0079bd !important;
+}
+
+.btn i {
+    color: #fff;
+    background-color: transparent !important;
+    transition: 0.3s;
+}
+
+#second-btn-active {
+    border: 2px solid #fff;
+}
+
+.text-presentation h2 {
+    font-family: Nunito;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 60px 40px 0px 40px;
+    color: #fff;
+    font-size: 59px;
+    text-align: center;
+}
+
+.text-presentation h4 {
+    font-family: Nunito;
+    padding: 15px 50px 70px 50px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-top: 45px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+}
+
+.text-presentation-button {
+    display: flex;
+    height: 60px;
+    justify-content: center;   
+    align-items: center; 
+}
+
+.btn-presentation {
+    font-family: Nunito;
+    font-weight: 800;
+    letter-spacing: 1px;
+    width: 20%;
+    margin: 0px 20px 0px 20px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 30px;
+    transition: 0.3s;
+    height: 52px;
+    border: 2px solid #0079bd;
+}
+
+#btn-active {
+    background-color: #005180;
+    border: 2px solid #005180;
+}
+
+.btn-presentation:hover, #btn-active:hover {
+    background-color: #0079bd;
+    border: 2px solid #0079bd;
+
+    color: #fff;
+}
+
+.arrow-down {
+    text-align: center;
+}
+
+@keyframes example {
+    25% {margin-top:  35px;}
+    50% {margin-top: 25px;}
+
+    75% {margin-top:  35px;}
+    100% {margin-top: 25px;}    
+  }
+
+.arrow-down i {
+    margin-top: 25px;
+    text-align: center;
+    cursor: pointer;
+    padding: 50px 0px 0px 0px;
+    color: #fff;
+    font-size: 22px;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.arrow-down i:hover {
+    transition: 0.3s;
+    color: #0079bd;
+}
+
+.container-2 {
+    height: 450px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    border-top: 9px solid #005180;
+    border-bottom: 9px solid #005180;
+}
+
+@keyframes example2 {
+    25% {bottom:  15px;}
+    50% {bottom: 5px;}
+
+    75% {bottom:  5px;}
+    100% {bottom: 15px;}    
+  }
+
+.card-container {
+    background-color: #fff;
+    padding: 15px 10px 0 10px;
+    width: 20%;
+    margin: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+    /*  */
+    transition: 0.3s;
+    align-content: center;
+    align-items: center
+}
+
+.card-container:hover #icon-title {
+    position: relative;
+
+    bottom: 15px;
+    animation-name: example2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.card-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-container #icon-title {
+    font-size: 45px;
+    padding: 0px 20px 20px 20px;
+    color: #8e8e8e;
+    transition: 0.3s;
+}
+
+.card-title h3 {
+    font-family: Nunito;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 5px 20px 0px 20px;
+    font-size: 17px;
+    color: #8e8e8e;
+    transition: 0.3s;
+}
+
+.card-container:hover #icon-title,
+.card-container:hover h3 {
+    color: #0079bd;
+}
+
+.card-title p {
+    letter-spacing: 1px;
+    margin-top: 15px;
+    font-family: Nunito;
+    font-weight: 500;
+    font-size: 15px;
+    color: #afafaf;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #232323;
+    flex-wrap: wrap;
+}
+
+footer h3 {
+    border-top: 1px solid #444;
+    margin: 15px;
+    width: 100%;
+    color: #8e8e8e;
+    font-size: 14px;
+    font-family: Nunito;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 25px 10px 10px 10px;
+}
+
+.left-side-footer {
+    display: flex;
+    color: #fff;
+    min-height: 180px;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.left-side-footer h3 {
+    font-size: 14px;
+}
+
+.talk-us {
+    width: 100%;
+}
+
+.talk-us h4 {
+    font-size: 16px;
+    color: #9a9a9a;        
+    font-family: 'Nunito';
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.talk-us .btn {
+    width: 100%;
+    text-align: start;
+}
+
+.talk-us .btn:hover {
+    text-align: center;
+}
+
+.right-side-footer {
+    display: flex;
+    color: #fff;
+    min-height: 180px;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.contact-us {
+    width: 100%;
+}
+
+.contact-us h4 {
+    font-size: 16px;
+    color: #9a9a9a;        
+    font-family: 'Nunito';
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.contact-us p {
+    font-family: Nunito;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s;
+    padding: 5px;
+}
+
+.contact-us a {
+    font-family: Nunito;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.contact-us p i {
+    font-size: 18px;
+    color: #fff;
+}
+
+.contact-us p a:hover {
+    color: #005180;
+}
+
+/*#region media querry*/
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0;
+    }
+
+    .nav-content {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    #icon-menu {
+        display: block;
+        cursor: pointer;
+        margin-top: 0px;
+        position: absolute;
+        color: #fff;
+        top: 0;
+        left: 0;
+        text-align: center;
+        height: auto;
+    }
+
+    #icon-menu i {
+        color: #fff;
+        font-size: 22px;
+    }
+
+    #icon-menu i:hover {
+        color: #0079bd;
+    }
+
+    #icon-menu-title {
+        display: block;
+    }    
+
+    nav {
+        height: 40px;
+        width: 100%;
+        align-content: flex-start;
+        justify-content: center;
+    }
+
+    nav ul {
+        width: 100%;
+        text-align: center;
+        margin: 0px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0px 0px 15px 0px;
+    }
+
+    nav ul li a {
+        font-weight: 800;
+    }
+
+    .logo-header {
+        display: none;
+    }
+
+    .text-presentation h2 {
+        font-size: 22px;
+    }
+
+    .text-presentation h4 {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+
+    .text-presentation-button {
+        display: flex;
+        height: 120px;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .btn-presentation {
+        width: 75%;
+        margin-top: 15px;
+    }
+
+    .container-2 {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .card-container {
+        width: auto;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .contact-us p {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:951px) { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .logo-header {
+        width: 80px;
+        height: 70px;
+        display: none;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+}
+
+@media screen and (min-width:952px) { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .nav-buttons {
+        display: flex;
+    }
+}
+
+/*#endregion */
+
+/*#endregion Home Css*/
+
+/*#region Popup Css*/
+.bg-modal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #313131a1;
+}
+
+.container-popup {
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    background-color: transparent;
+    display: flex;
+}
+
+.left-side {
+    background-color: #fff;
+    width: 50%;
+    padding: 40px;
+    border-radius: 10px 0px 0px 10px;
+    border-right: 10px solid #0079bd;
+}
+
+.left-side h3 {
+    font-family: Nunito;
+    font-size: 17px;
+    color: #0079bd;
+    text-align: start;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid #eee;
+}
+
+.left-side p {
+    font-family: Nunito;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 15px;
+    padding: 10px 10px 0px 10px;
+
+    border-top: 1px solid #eee;
+}
+
+.left-side .input-style {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.left-side .input-style::placeholder {
+    color: #bbb;
+} 
+
+.left-side .two-fields-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.left-side .two-fields-row .input-style {
+    width: 45%;
+}
+
+.left-side .two-fields-row select {
+    width: 45%;
+}
+
+.left-side select {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.right-side {
+    background-image: url('https://tympanus.net/Freebies/Sedna/img/hero.jpg');
+    background-size: cover;
+    width: 50%;
+    padding: 40px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.right-side #icon-close {
+    position: absolute;
+    top: 10px;
+    left: 370px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.right-side h3 {
+    font-family: Nunito;
+    font-size: 17px;
+    color: #fff;
+    text-align: start;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid #fff;
+}
+
+.right-side p {
+    font-family: Nunito;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 15px;
+    padding: 10px 10px 0px 10px;
+
+    border-top: 1px solid #aaa;
+}
+
+.right-side .input-style {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.right-side .input-style::placeholder {
+    color: #fff;
+} 
+
+.right-side .two-fields-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.right-side .two-fields-row .input-style {
+    width: 45%;
+}
+
+.right-side .two-fields-row select {
+    width: 45%;
+}
+
+.right-side select {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.right-side .btn {
+    height: 30px;
+    width: 100%;
+    margin-top: 55px;
+}
+
+#icon-close {
+    font-size: 17px;
+    color: #fff;
+    position: relative;
+    margin-right: -14px;
+    top: 10px;
+    left: -25px;
+    transition: 0.3s;
+}
+
+.container-popup a {
+    cursor: pointer;
+}
+
+.container-popup a #icon-close:hover {
+    color: #0079bd;
+}
+
+/*#endregion Popup Css*/

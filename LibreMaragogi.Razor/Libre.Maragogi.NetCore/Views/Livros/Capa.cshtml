@@ -1,0 +1,46 @@
+﻿@model Livro
+
+@{
+    Layout = "_LayoutPanel";
+}
+
+<link href="~/css/Categorias/categorias.css" rel="stylesheet" />
+
+<div class="wrapper-panel">
+    <div class="wrapper-logo">
+        <div class="logo">
+            @{
+                if ((ViewBag.Images as List<string>).Count != 0)
+                {
+                    <div>
+                        <img src="@ViewBag.Images[0].Substring(ViewBag.Images[0].IndexOf("wwwroot")).Replace("wwwroot", "")" style="width: 22rem; height: 18rem;" alt="...">
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-info" role="alert">
+                        Essa Categoria não contém 'Logo'
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="input-logo">
+            <h4>@Model.Titulo</h4>
+            <hr />
+            <div>
+                <form method="post" enctype="multipart/form-data" asp-action="Capa">
+                    <div class="form-group">
+                        <div class="custom-file">
+                            <input class="custom-file-input" name="files" type="file" id="formFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary col" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

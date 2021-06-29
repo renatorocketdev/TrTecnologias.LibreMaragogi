@@ -1,0 +1,166 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    height: 100%;
+    background-image: url('../../assets/bg.jpg');
+    background-size: 100vw 100vh;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    background-color: #eee;
+    width: 350px;
+    height: auto;
+    margin: 0px;
+    border-radius: 10px 0px 0px 10px;
+    border-top: 10px solid #005180;
+}
+
+.container-2 {
+    background-image: url('https://tympanus.net/Freebies/Sedna/img/hero.jpg');
+    background-size: cover;
+    width: 350px;
+    height: auto;
+    margin: 0px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.container h3 {
+    font-family: Nunito;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 30px 15px 15px 15px;    
+    font-size: 23px;
+    text-align: center;
+}
+
+.container p {
+    font-family: Nunito;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 15px;
+    padding: 10px 10px 0px 10px;
+
+    border-top: 1px solid #bdbdbd;
+}
+
+.container form {
+    padding: 10px 25px 10px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container form label {
+    font-family: Nunito;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.container p {
+    color: #d80000;
+}
+
+.container-2 h3 {
+    font-family: Nunito;
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding: 30px 15px 15px 15px;    
+    font-size: 23px;
+    color: #fff;
+    text-align: center;
+}
+
+.container-2 form label {
+    font-family: Nunito;
+    font-size: 12px;
+    color: #fff;
+}
+
+.container form input {
+    width: 100%;
+    font-family: Nunito;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    color: #bdbdbd;
+    margin: 0px 0px 15px 0px;
+    background-color: transparent;
+    padding: 0px 0px 0px 30px;
+}
+
+.container-2 form input::placeholder {
+    color: #fff;
+}
+
+#input-icon {
+    position: relative;
+    top: 24px;
+    left: 10px;
+    font-size: 14px;
+    color: #bdbdbd;
+    width: 10px;
+}
+
+.container-2 #input-icon {
+    position: relative;
+    top: 24px;
+    left: 10px;
+    font-size: 14px;
+    color: #fff;
+    width: 10px;
+}
+
+.container-button {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-form {
+    margin: 15px 0px 15px 0px;
+    font-family: Nunito;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border: none;
+    height: 40px;
+    transition: 0.3s;
+    padding: 10px 0px 10px 0px;
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-form:hover {
+    color: #0079bd;
+    background-color: rgb(207, 207, 207);
+    border: none;
+    border-radius: 25px;
+}
+
+/*#region media querry*/
+
+@media screen and (max-width: 600px) {
+    .content {
+        height: auto;
+    }
+
+    .container {
+        margin: 10px 10px 0px 10px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .container-2 {
+        margin: 0px 10px 10px 10px;
+        border-radius: 0px 0px 10px 10px;
+    }
+}
+
+/*#endregion media querry*/

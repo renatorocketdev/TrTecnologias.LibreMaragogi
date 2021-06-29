@@ -1,0 +1,20 @@
+﻿@model Livro
+
+@{
+    Layout = "_LayoutPanel";
+}
+
+<link href="~/css/global/create-edit.css" rel="stylesheet" />
+
+
+<div class="header-table">
+    <div class="wrapper-content-title">
+        <i class="fa fa-file"></i>
+        <h6>Deletar Livro - @Model.Titulo</h6>
+    </div>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="LivrosId" />
+    <input type="submit" value="Deletar" class="btn-submit" />
+</form>

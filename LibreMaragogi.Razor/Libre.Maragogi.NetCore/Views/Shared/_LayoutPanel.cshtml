@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/css/global/layout.css">
+
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a>@ViewBag.Nome</a><i class="fa fa-user"></i></li>
+                    <li><i class="fa fa-caret-down"></i></li>
+
+                    <li><a routerLink="emprestimo"><i class="fa fa-bars"></i> Menu</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <div class="menu-categoria">
+                <img class="logo" src="~/assets/logo-preta.png" alt="logo" />
+                <hr />
+                <h6>ACERVO</h6>
+                <ul>
+                    <li><a asp-controller="Livros" asp-action="Index"><i class="fa fa-book"></i> Livros</a></li>
+                    <li><a asp-controller="Livros" asp-action="Create"><i class="fa fa-plus"></i> Adicionar Livro</a></li>
+                </ul>
+                <div class="divisor"></div>
+
+                <h6>EMPRÉSTIMOS</h6>
+                <ul>
+                    <li><a asp-controller="Emprestimos" asp-action="Index"><i class="fa fa-file"></i> Empréstimos</a></li>
+                    <li><a asp-controller="Emprestimos" asp-action="Create"><i class="fa fa-plus"></i> Adicionar Empréstimo</a></li>
+                </ul>
+                <div class="divisor"></div>
+
+                <h6>DEVOLUÇÕES</h6>
+                <ul>
+                    <li><a asp-controller="Devolvidos" asp-action="Index"><i class="fa fa-file"></i> Devoluções</a></li>
+                    <li><a asp-controller="Devolvidos" asp-action="Create"><i class="fa fa-plus"></i> Adicionar Devolução</a></li>
+                </ul>
+                <div class="divisor"></div>
+
+                <h6>LEITORES</h6>
+                <ul>
+                    <li><a asp-controller="Leitores" asp-action="Index"><i class="fa fa-file"></i> Leitores</a></li>
+                    <li><a asp-controller="Leitores" asp-action="Create"><i class="fa fa-plus"></i> Adicionar Leitor</a></li>
+                </ul>
+            </div>
+
+            <div class="wrapper-content">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    @*<div class="box">
+            <div class="header">
+                <nav>
+                    <h6>Clima</h6>
+                </nav>
+            </div>
+            <div class="content">
+                <div class="menu-categoria">
+                    <img class="logo" src="~/assets/logo-preta.png" />
+                    <hr />
+                    <h6>Acervo</h6>
+                    <ul>
+                        <li><a asp-controller="Livros" asp-action="Index">Livros</a></li>
+                        <li><a asp-controller="Livros" asp-action="Create">Novo Livro</a></li>
+                    </ul>
+
+                    <h6>Emprestimos</h6>
+                    <ul>
+                        <li><a asp-controller="Emprestimos" asp-action="Index">Empréstimos</a></li>
+                        <li><a asp-controller="Emprestimos" asp-action="Create">Novo Empréstimo</a></li>
+                    </ul>
+
+                    <h6>Devoluções</h6>
+                    <ul>
+                        <li><a asp-controller="Devolvidos" asp-action="Index">Devoluções</a></li>
+                        <li><a asp-controller="Devolvidos" asp-action="Create">Novo Devolução</a></li>
+                    </ul>
+
+                    <h6>Leitores</h6>
+                    <ul>
+                        <li><a asp-controller="Leitores" asp-action="Index">Leitores</a></li>
+                        <li><a asp-controller="Leitores" asp-action="Create">Novo Leitor</a></li>
+                    </ul>
+                </div>
+                <div class="wrapper-content">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>*@
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿@model List<Usuario>
+
+@{
+    Layout = "_LayoutPanel";
+}
+
+<link href="~/css/global/lists.css" rel="stylesheet" />
+
+<div class="header-table">
+    <div class="wrapper-content-title">
+        <i class="fa fa-book"></i>
+        <h6>Nosso Acervo</h6>
+    </div>
+</div>
+
+<div id="title-table-divisor" class="divisor"></div>
+
+<form asp-action="Index">
+    <div class="select-container">
+        <div class="wrapper-content-search">
+            <div class="container-1">
+                <input type="search" id="search" placeholder="Pesquisar um livro..." />
+                <button class="btn-search"><i id="btn-search-icon" class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Cpf</th>
+            <th scope="col">Nascimento</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var usuario in Model)
+            {
+                <tr>
+                    <td>@usuario.Nome</td>
+                    <td>@usuario.Cpf</td>
+                    <td>
+                        @{
+                            if (usuario.Nascimento.HasValue)
+                            {
+                                <span>@usuario.Nascimento.Value.ToString("dd/MM/yyyy")</span>
+                            }
+                        }
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@usuario.UsuariosId"><i class="fas fa-pen"></i></a>
+                        <a asp-action="Delete" asp-route-id="@usuario.UsuariosId"><i class="fas fa-minus"></i></a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

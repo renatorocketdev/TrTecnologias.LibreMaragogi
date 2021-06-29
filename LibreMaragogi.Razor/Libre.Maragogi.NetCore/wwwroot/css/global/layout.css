@@ -1,0 +1,329 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #F6F6F6;
+}
+
+.btn-submit {
+    font-family: Nunito;
+    width: 150px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 20px;
+    border: #7a7a7a73 1px solid;
+    background-color: #0079bd;
+    color: #fff;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+    .box .header {
+        flex: 0 1 auto;
+    }
+
+    .box .content {
+        flex: 1 1 auto;
+    }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: #fff;
+    color: #0079BD;
+    height: 60px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+    nav ul {
+        list-style: none;
+        margin: 15px;
+        padding: 0;
+    }
+
+        nav ul li:nth-child(2) {
+            padding: 5px;
+            font-family: Nunito;
+            font-weight: 600;
+            font-size: 15px;
+            list-style-type: none;
+            display: inline;
+            border-radius: 0px;
+            border-right: #d8d8d869 1px solid;
+        }
+
+            nav ul li:nth-child(2):hover {
+                background-color: transparent;
+            }
+
+        nav ul li {
+            padding: 10px 10px 10px 15px;
+            font-family: Nunito;
+            font-weight: 600;
+            font-size: 15px;
+            list-style-type: none;
+            display: inline;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+            nav ul li:hover {
+                background: #E6E6E6;
+                color: #005282;
+                font-weight: 800;
+            }
+
+            nav ul li a, i, .fa {
+                margin-right: 10px;
+                text-decoration: none;
+                color: #0079BD;
+            }
+
+                nav ul li a:last-child {
+                    margin-right: 0;
+                }
+
+    nav h6,
+    nav div a {
+        padding: 10px;
+        color: #0079BD;
+        font-size: 20px;
+    }
+
+.wrapper-menu {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .wrapper-menu ul {
+        display: flex;
+        align-items: end;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+        .wrapper-menu ul li {
+            padding: 10px 0 10px 0;
+            font-weight: 600;
+        }
+
+            .wrapper-menu ul li a {
+                padding: 10px;
+                color: #000;
+            }
+
+                .wrapper-menu ul li a:hover {
+                    background-color: #64920f;
+                    text-decoration: none;
+                }
+
+.content {
+    display: flex;
+}
+
+.logo {
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+
+.menu-categoria {
+    margin: 100px 10px 10px 30px;
+    padding: 10px;
+    background-color: #F6F6F6;
+    width: 25%;
+    color: #000;
+}
+
+    .menu-categoria hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #FFF;
+        margin: 1em 5px;
+        padding: 0;
+    }
+
+    .menu-categoria h6 {
+        margin-top: 5px;
+        font-family: Roboto;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+        font-size: 15px;
+        color: #BFBFBF;
+        margin-bottom: 20px;
+    }
+
+    .menu-categoria ul {
+        width: 200px;
+        height: auto;
+        margin: 0 15px 15px 0;
+        padding: 0;
+        background: transparent;
+        list-style-type: none;
+    }
+
+        .menu-categoria ul li {
+            padding: 5px 0 5px 10px;
+            font-family: Nunito;
+            font-weight: 400;
+            height: 100%;
+            font-size: 15px;
+            line-height: 30px;
+            color: #7a7a7a;
+            display: block;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+            .menu-categoria ul li a {
+                text-decoration: none;
+                color: #7a7a7a;
+            }
+
+            .menu-categoria ul li i {
+                font-size: 20px;
+            }
+
+            .menu-categoria ul li:hover {
+                background: #E6E6E6;
+                color: #005282;
+                font-weight: 800;
+            }
+
+                .menu-categoria ul li:hover a {
+                    color: #005282;
+                }
+
+                .menu-categoria ul li:hover i {
+                    color: #005282;
+                }
+
+            .menu-categoria ul li .fa {
+                margin: 0 10px 0 0;
+                color: #7a7a7a;
+                line-height: 0;
+            }
+
+.divisor {
+    width: 200px;
+    height: 0.5px;
+    background-color: #d8d8d869;
+    margin-bottom: 15px;
+}
+
+.wrapper-content {
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+}
+
+.header-table {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-content-button {
+    margin-top: 105px;
+}
+
+.wrapper-content-title {
+    display: flex;
+}
+
+    .wrapper-content-title h6 {
+        color: #0079BD;
+        font-size: 27px;
+        margin-top: 100px;
+    }
+
+    .wrapper-content-title button {
+        align-content: flex-end;
+    }
+
+    .wrapper-content-title i {
+        margin-top: 105px;
+        font-size: 25px;
+    }
+
+/* Estilização da Tabela */
+.styled-table {
+    border-collapse: collapse;
+    margin: 13px 0px 10px 0px;
+    font-size: 0.9em;
+    font-family: Nunito;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    width: 100%;
+    min-width: 400px;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+    .styled-table thead {
+        height: 30px;
+    }
+
+    .styled-table tbody {
+        color: #7A7A7A;
+    }
+
+tr {
+    transition: 0.3s;
+}
+
+    tr:hover {
+        background-color: #E6E6E6;
+    }
+
+.styled-table thead tr {
+    background-color: #0079BD;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table th,
+tr {
+    text-align: center;
+}
+
+.styled-table td a i {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #7A7A7A;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .styled-table td a i:hover {
+        color: #52C1FF;
+    }
+
+.wrapper-panel {
+    background-color: snow;
+    padding: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+}

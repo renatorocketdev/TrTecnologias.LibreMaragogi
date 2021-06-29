@@ -1,0 +1,98 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #f4f3f9;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    height: 50%;
+    background-color: #f4f3f9;
+}
+
+.content {
+    height: 50%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #2a2a52;
+    justify-content: space-around;
+    padding: 10px;
+    color: #FFF;
+}
+
+    nav div a {
+        margin-right: 10px;
+        color: #FFF;
+    }
+
+        nav div a:hover {
+            margin-right: 10px;
+            color: #77b500;
+        }
+
+.header img {
+    display: flex;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.menu-principal li:first-child {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+.wrapper-menu {
+    display: flex;
+    background-color: #2a2a52;
+    margin-top: -15px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+    .wrapper-menu ul {
+        display: flex;
+        list-style: none;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding: 10px;
+    }
+
+        .wrapper-menu ul li {
+            margin: 5px;
+        }
+
+            .wrapper-menu ul li a {
+                color: #FFF;
+            }
+
+                .wrapper-menu ul li a:hover {
+                    color: #77b500;
+                    text-decoration: none;
+                }
+
+.menu-login {
+    color: #FFF;
+}
+
+table {
+    border: 1px solid #EEE;
+    background-color: #f4f3f9;
+}
+
+    table thead {
+        background-color: #2a2a52;
+        color: #FFF;
+    }

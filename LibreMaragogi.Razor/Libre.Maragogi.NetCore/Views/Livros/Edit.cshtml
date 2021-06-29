@@ -1,0 +1,140 @@
+﻿@model Livro
+
+@{
+    Layout = "_LayoutPanel";
+}
+
+<link href="~/css/leitor-create.css" rel="stylesheet" />
+
+<div class="header-table">
+    <div class="wrapper-content-title">
+        <i class="fa fa-book"></i>
+        <h6>Editar Livro</h6>
+    </div>
+</div>
+
+<div id="title-table-divisor" class="divisor"></div>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="LivrosId" />
+    <div>
+        <div class="form-group">
+            <input asp-for="Serie" class="form-control" type="text" placeholder="Série" />
+            <span asp-validation-for="Serie" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input asp-for="Tombo" class="form-control" type="text" placeholder="Tombo" />
+            <span asp-validation-for="Tombo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input asp-for="Classificacao" class="form-control" type="text" placeholder="Volume" />
+            <span asp-validation-for="Classificacao" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div>
+        <div class="form-group">
+            <input asp-for="Titulo" class="form-control" type="text" placeholder="Título" />
+            <span asp-validation-for="Titulo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input asp-for="Autor" class="form-control" type="text" placeholder="Autor" />
+            <span asp-validation-for="Autor" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input asp-for="Editora" class="form-control" type="text" placeholder="Editora" />
+            <span asp-validation-for="Editora" class="text-danger text-center"></span>
+        </div>
+    </div>
+
+    <div>
+        <div class="form-group">
+            <input asp-for="Ano" class="form-control" type="text" placeholder="Ano" />
+            <span asp-validation-for="Ano" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input asp-for="Exemplares" class="form-control" type="number" placeholder="Quantidade de Exemplares" />
+            <span asp-validation-for="Exemplares" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input asp-for="Volume" class="form-control" type="text" placeholder="Volume" />
+
+            <span asp-validation-for="Volume" class="text-danger"></span>
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+            <select asp-for="Categoria" class="custom-select">
+                <option value="">Assunto</option>
+                <option value="Artigo acadêmico">Artigo acadêmico</option>
+                <option value="Artigo científico">Artigo científico</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Biografia">Biografia</option>
+                <option value="Carta ">Carta </option>
+                <option value="Comédia dramática">Comédia dramática</option>
+                <option value="Conto">Conto</option>
+                <option value="Crônica">Crônica</option>
+                <option value="Drama">Drama</option>
+                <option value="Drama (Teatro)">Drama (Teatro)</option>
+                <option value="Ensaio">Ensaio</option>
+                <option value="História em Quadrinhos (HQ)">História em Quadrinhos (HQ)</option>
+                <option value="Jurídico">Jurídico</option>
+                <option value="Literatura fantástica">Literatura fantástica</option>
+                <option value="Literatura Infantil">Literatura Infantil</option>
+                <option value="Literatura Infanto-Juvenil">Literatura Infanto-Juvenil</option>
+                <option value="Literatura nacional">Literatura nacional</option>
+                <option value="Médico">Médico</option>
+                <option value="Memórias">Memórias</option>
+                <option value="Novela">Novela</option>
+                <option value="Poesia">Poesia</option>
+                <option value="Policial">Policial</option>
+                <option value="Psicológico">Psicológico</option>
+                <option value="Romance">Romance </option>
+                <option value="Romântico">Romântico</option>
+                <option value="Suspense">Suspense</option>
+                <option value="Terror">Terror</option>
+            </select>
+            <span asp-validation-for="Categoria" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <select asp-for="Categoria2" class="custom-select">
+                <option value="">Assunto 2</option>
+                <option value="Artigo acadêmico">Artigo acadêmico</option>
+                <option value="Artigo científico">Artigo científico</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Biografia">Biografia</option>
+                <option value="Carta ">Carta </option>
+                <option value="Comédia dramática">Comédia dramática</option>
+                <option value="Conto">Conto</option>
+                <option value="Crônica">Crônica</option>
+                <option value="Drama">Drama</option>
+                <option value="Drama (Teatro)">Drama (Teatro)</option>
+                <option value="Ensaio">Ensaio</option>
+                <option value="História em Quadrinhos (HQ)">História em Quadrinhos (HQ)</option>
+                <option value="Jurídico">Jurídico</option>
+                <option value="Literatura fantástica">Literatura fantástica</option>
+                <option value="Literatura Infantil">Literatura Infantil</option>
+                <option value="Literatura Infanto-Juvenil">Literatura Infanto-Juvenil</option>
+                <option value="Literatura nacional">Literatura nacional</option>
+                <option value="Médico">Médico</option>
+                <option value="Memórias">Memórias</option>
+                <option value="Novela">Novela</option>
+                <option value="Poesia">Poesia</option>
+                <option value="Policial">Policial</option>
+                <option value="Psicológico">Psicológico</option>
+                <option value="Romance">Romance </option>
+                <option value="Romântico">Romântico</option>
+                <option value="Suspense">Suspense</option>
+                <option value="Terror">Terror</option>
+            </select>
+            <span asp-validation-for="Categoria2" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div>
+        <input type="submit" class="btn-submit" value="Atualizar Dados" />
+    </div>
+
+</form>

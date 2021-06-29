@@ -1,0 +1,50 @@
+﻿@model Usuario
+
+@{
+    Layout = "_LayoutPanel";
+}
+
+<link href="~/css/leitor-create.css" rel="stylesheet" />
+
+<div class="header-table">
+    <div class="wrapper-content-title">
+        <i class="fa fa-user"></i>
+        <h6>Editar Leitor</h6>
+    </div>
+</div>
+
+<div id="title-table-divisor" class="divisor"></div>
+
+<form asp-action="Create" method="POST">
+    <input type="hidden" asp-for="UsuariosId" />
+    <input class="form-control" asp-for="Nome" type="text" placeholder="Nome">
+    <div>
+        <input class="form-control" asp-for="Nascimento" type="date">
+        <input class="form-control CPF" asp-for="Cpf" type="text" placeholder="CPF">
+        <input class="form-control telefone" asp-for="Telefone" type="text" placeholder="Telefone">
+    </div>
+
+    <div>
+        <input class="form-control CEP" asp-for="Cep" type="text" placeholder="CEP">
+        <input class="form-control" asp-for="Numero" type="text" placeholder="Número">
+    </div>
+
+    <input class="form-control" asp-for="Logradouro" type="text" placeholder="Logradouro">
+    <input class="form-control" asp-for="Email" type="email" placeholder="Email">
+    <input class="form-control" asp-for="Senha" type="password" placeholder="Senha">
+    <input class="form-control" asp-for="Role" value="Comum" type="text" hidden>
+
+    <div>
+        <input class="form-control" asp-for="AreaInteresse" type="text" placeholder="Área de Interesse">
+        <input class="form-control" asp-for="Profissao" type="text" placeholder="Profissão">
+        <select asp-for="Sexo" class="custom-select">
+            <option value="">Sexo</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Masculino">Masculino</option>
+        </select>
+    </div>
+
+    <div>
+        <input type="submit" class="btn-submit" value="Registrar" />
+    </div>
+</form>

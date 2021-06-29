@@ -1,0 +1,103 @@
+/* Pen-specific styles */
+html, body, section {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Pattern styles */
+.content {
+  display: flex;
+}
+
+.apresentacao {
+    background-color: #0079bd;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.apresentacao img {
+    width: 75%;
+    width: 75%;
+}
+
+.registrar {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  display: flex;
+}
+
+    form div input:first-child {
+        background-color: #0079bd;
+        color: #FFF;
+    }
+
+        form div input:first-child:hover {
+            background-color: #7a7a7a73;
+            color: #FFF;
+        }
+
+    form div a:last-child {
+        background-color: #7a7a7a73;
+        color: #FFF;
+    }
+
+        form div a:last-child:hover {
+            background-color: #0079bd;
+            color: #FFF;
+        }
+
+form div input, form a {
+  width: 50%;
+}
+
+form a {
+    text-decoration: none;
+    color: #000;
+}
+
+form a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+input, form a {
+  border: none;
+  background: hsl(0 0% 93%);
+  border-radius: .25rem;
+  padding: .75rem 1rem;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apresentacao {
+        width: 100%;
+        padding: 10%;
+    }
+
+    .registrar {
+        display: flex;
+        height: 100%;
+    }
+}

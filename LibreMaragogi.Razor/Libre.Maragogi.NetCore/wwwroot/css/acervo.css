@@ -1,0 +1,145 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.box .header {
+  flex: 0 1 auto;
+  /* The above is shorthand for:
+  flex-grow: 0,
+  flex-shrink: 1,
+  flex-basis: auto
+  */
+}
+
+.box .content {
+  flex: 1 1 auto;
+}
+
+.header{
+  background-color: #005e78;
+}
+/**/
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #004b60;
+}
+
+nav h6, nav div a {
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.wrapper-menu {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper-menu ul {
+  display: flex;
+  align-items: end;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.wrapper-menu ul li {
+  padding: 10px 0 10px 0;
+}
+
+.wrapper-menu ul li a {
+  padding: 10px;
+  color: #fff;
+}
+
+.wrapper-menu ul li a:hover {
+  background-color: #003c4d;
+  text-decoration: none;  
+}
+
+.content {
+  display: flex;
+}
+
+.logo {
+  display: block;
+  margin: 0;
+  width: 100%;
+}
+
+.menu-categoria {
+  margin: 10px;
+  padding: 10px;
+  background-color: #fffafa;
+  width: 20%;
+}
+
+.menu-categoria h6 {
+  margin-top: 5px;
+}
+
+.menu-categoria ul {
+  margin: 0 10px; 
+  padding: 0;
+  list-style-type: none;
+}
+
+.livros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wrapper-livros {
+  margin: 10px;
+  width: 100%;
+}
+
+.livro-geral {
+  width: 20%;
+  background-color: #eee;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.foto-livro {
+  width: 100%;
+  height: 200px;  
+  background-color: #000;
+}
+
+.descricao-livro {
+  padding: 10px 10px 5px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.promocional {
+  height: 100px;
+  background-color: #EEE;
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.livro-geral:hover {
+  background-color: #CCC;
+}
