@@ -18,6 +18,5 @@ export class DashboardComponent implements OnInit {
     "../node_modules/1js/plugins.js",
     "../node_modules/1js/main.js",
     "../node_modules/jquery/dist/jquery.js"
-
   ]
 }

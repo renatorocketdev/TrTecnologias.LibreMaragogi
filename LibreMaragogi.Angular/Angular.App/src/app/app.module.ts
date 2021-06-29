@@ -8,6 +8,7 @@ import { LivroComponent } from 'src/components/livro/livro.component';
 import { EmprestimoComponent } from 'src/components/emprestimo/emprestimo.component';
 import { DevolucaoComponent } from 'src/components/devolucao/devolucao.component';
 import { LeitorComponent } from 'src/components/leitor/leitor.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [				
@@ -20,7 +21,8 @@ import { LeitorComponent } from 'src/components/leitor/leitor.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
