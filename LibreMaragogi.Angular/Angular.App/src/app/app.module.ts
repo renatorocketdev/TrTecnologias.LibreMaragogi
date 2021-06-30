@@ -9,6 +9,7 @@ import { EmprestimoComponent } from 'src/components/emprestimo/emprestimo.compon
 import { DevolucaoComponent } from 'src/components/devolucao/devolucao.component';
 import { LeitorComponent } from 'src/components/leitor/leitor.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [				
@@ -22,7 +23,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
