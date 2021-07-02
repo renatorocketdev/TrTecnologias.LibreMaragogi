@@ -12,9 +12,9 @@ export class AuthService {
 
   constructor(private client: HttpClient) { }
 
-  authenticate(user: string, pwd: string): Observable<any>{
+  authenticate(cpf: string, pwd: string): Observable<any>{
     return this.client.post(this.url, {
-      Nome: user,
+      Cpf: cpf,
       Senha: pwd
     });
   }

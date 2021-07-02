@@ -8,7 +8,7 @@ import { AuthService } from 'src/services/auth/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user = '';
+  cpf = '';
   pwd = '';
 
   constructor(private auth: AuthService, private router: Router) {}
@@ -18,15 +18,15 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.router.navigate(['/', 'dashboard']);
+    //this.router.navigate(['/', 'dashboard']);
     
-    // this.auth.authenticate(this.user, this.pwd).subscribe(
-    //   () => {
-    //     this.router.navigate(['/', 'dashboard']);
-    //   }, 
-    //   (error) => {
-    //     alert(error);
-    //   }
-    // );
+    this.auth.authenticate(this.cpf, this.pwd).subscribe(
+      () => {
+        this.router.navigate(['/', 'dashboard']);
+      }, 
+      (error) => {
+        alert(error);
+      }
+    );
   }
 }

@@ -35,7 +35,7 @@ namespace libre_api.Controllers
         public IActionResult Post([FromBody] Usuario usuario)
         {
             var user = db.Usuarios
-                .Where(x => x.Nome.Equals(usuario.Nome) && x.Senha.Equals(usuario.Senha))
+                .Where(x => x.Cpf.Equals(usuario.Cpf) && x.Senha.Equals(usuario.Senha))
                 .FirstOrDefault();
 
             if(user == null) {

@@ -47,5 +47,11 @@ namespace libre_api.Controllers
             return Ok(list);
         }
 
+        [HttpPost]
+        public IActionResult Post(Livro livro){
+            db.Livros.Add(livro);
+            db.SaveChanges();
+            return Ok(livro);
+        }
     }
 }
