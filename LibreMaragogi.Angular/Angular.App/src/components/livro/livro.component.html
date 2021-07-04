@@ -2,7 +2,7 @@
 <div class="top-bar">
     <h3>Livros</h3>
 
-    <button class="btn" (click)="open(content)">Adicionar</button>
+    <button class="btn" (click)="open(content)">Novo Livro</button>
 </div>
         
 <div class="actions">
@@ -118,11 +118,12 @@
 <!--MODAL POPUP-->
 <ng-template #content let-modal>
     <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+        <i id="icon-title" class="fa fa-book"></i>
+        <h4 class="modal-title" id="modal-basic-title">Adicionar Livro</h4>
     </div>
 
     <div class="modal-body">
-        <form [formGroup]='livrosForm'>
+        <form class="modal-form" [formGroup]='livrosForm'>
             <div class="form-group">
                 <input class="form-control" type="text" placeholder="Série" formControlName='serie'/>
                 <input class="form-control" type="text" placeholder="Tombo" formControlName='tombo'/>
@@ -206,6 +207,6 @@
     </div>
 
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save')">Save</button>
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save')">Salvar</button>
     </div>
 </ng-template>        

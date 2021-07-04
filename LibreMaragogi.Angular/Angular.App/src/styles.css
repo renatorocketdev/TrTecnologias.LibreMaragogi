@@ -341,3 +341,33 @@ tr {
     margin-right: 10px;
 }
 
+/* #region MODAL POPUP */
+.modal-content {
+    border-radius: 25px;
+}
+
+.modal-header {
+    justify-content: flex-start;
+}
+
+.modal-header h4 {
+    font-family: Nunito;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #5a5a5a;
+}
+
+#icon-title {
+    margin: 0px 35px 0px 15px;
+    width: 5px;
+    font-size: 19px;
+    color: #5a5a5a;
+}
+
+.modal-form {
+    background-color: red;
+    width: 100% !important;
+    display: flex;
+}
+/* #endregion MODAL POPUP */
