@@ -95,6 +95,7 @@ label {
     border: none;
     border-bottom: 1px solid #aaaaaa52;
     height: 40px;
+    color: #5a5a5a;
     transition: 0.3s;
     padding: 10px 0px 10px 0px;
 }
@@ -114,6 +115,7 @@ label {
     letter-spacing: 1px;
     font-size: 12px;
     border: none;
+    color: #5a5a5a;
     height: 35px;
     transition: 0.3s;
 }

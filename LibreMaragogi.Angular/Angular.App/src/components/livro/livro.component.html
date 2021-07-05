@@ -116,101 +116,59 @@
 
 <!--MODAL POPUP-->
 <ng-template #content let-modal>
-    <div class="modal-header">
-        <i id="icon-title" class="fa fa-book"></i>
-        <h4 class="modal-title" id="modal-basic-title">Adicionar Livro</h4>
-    </div>
-
     <div class="modal-body">
         <form class="modal-form" [formGroup]='livrosForm'>
-            <div class="form-group">
-                <input class="form-input form-control" type="text" placeholder="Série" formControlName='serie'/>
-                <input class="form-input form-control" type="text" placeholder="Tombo" formControlName='tombo'/>
-                <input class="form-input form-control" type="text" placeholder="Classificação" formControlName='classificacao'/>
-            </div>
+            <div class="bg-modal">
+                <div class="container-popup">
+                  <div class="left-side">
+                    <h3>Informações Gerais do Livro</h3>
+            
+                    <input class="input-style" type="text" placeholder="Título...">
+            
+                    <div class="two-fields-row">
+                        <input class="input-style" type="text" placeholder="Autor...">
+                        <input class="input-style" type="text" placeholder="Editora...">
+                    </div>
 
-            <div  class="form-group">
-                <input class="form-input form-control" type="text" placeholder="Título" formControlName='titulo'/>
-                <input class="form-input form-control" type="text" placeholder="Autor" formControlName='autor'/>
-                <input class="form-input form-control" type="text" placeholder="Editora" formControlName='editora' asp-for="Editora"/>
+                    <div class="two-fields-row">
+                        <select>      
+                        <option>Assunto I</option>      
+                        <option value="Assunto1">Assunto 1</option>
+                        </select>
 
-            </div>
-        
-            <div class="form-group">
-                <input asp-for="Ano" class="form-input form-control" type="text" placeholder="Ano" formControlName='ano'/>
-                <input asp-for="Exemplares" class="form-input form-control" type="number" placeholder="Quantidade de Exemplares" formControlName='exemplares'/>
-                <input asp-for="Volume" class="form-input form-control" type="text" placeholder="Volume" formControlName='volume'/>
-            </div>
+                        <select>      
+                        <option>Assunto II</option>      
+                        <option value="Assunto2">Assunto 2</option>
+                        </select>
+                    </div>
+            
+                    <input class="input-style" type="text" placeholder="Ano de Lançamento...">
+                    <input class="input-style" type="text" placeholder="Exemplares...">
+                    <input class="input-style" type="text" placeholder="Volume...">
 
-            <div class="form-group">
-                <select formControlName='categoria'>
-                    <option value="">Assunto</option>
-                    <option value="Artigo acadêmico">Artigo acadêmico</option>
-                    <option value="Artigo científico">Artigo científico</option>
-                    <option value="Aventura">Aventura</option>
-                    <option value="Biografia">Biografia</option>
-                    <option value="Carta ">Carta </option>
-                    <option value="Comédia dramática">Comédia dramática</option>
-                    <option value="Conto">Conto</option>
-                    <option value="Crônica">Crônica</option>
-                    <option value="Drama">Drama</option>
-                    <option value="Drama (Teatro)">Drama (Teatro)</option>
-                    <option value="Ensaio">Ensaio</option>
-                    <option value="História em Quadrinhos (HQ)">História em Quadrinhos (HQ)</option>
-                    <option value="Jurídico">Jurídico</option>
-                    <option value="Literatura fantástica">Literatura fantástica</option>
-                    <option value="Literatura Infantil">Literatura Infantil</option>
-                    <option value="Literatura Infanto-Juvenil">Literatura Infanto-Juvenil</option>
-                    <option value="Literatura nacional">Literatura nacional</option>
-                    <option value="Médico">Médico</option>
-                    <option value="Memórias">Memórias</option>
-                    <option value="Novela">Novela</option>
-                    <option value="Poesia">Poesia</option>
-                    <option value="Policial">Policial</option>
-                    <option value="Psicológico">Psicológico</option>
-                    <option value="Romance">Romance </option>
-                    <option value="Romântico">Romântico</option>
-                    <option value="Suspense">Suspense</option>
-                    <option value="Terror">Terror</option>
-                </select>
-
-                <select formControlName='categoria2'>
-                    <option value="">Assunto 2</option>
-                    <option value="Artigo acadêmico">Artigo acadêmico</option>
-                    <option value="Artigo científico">Artigo científico</option>
-                    <option value="Aventura">Aventura</option>
-                    <option value="Biografia">Biografia</option>
-                    <option value="Carta ">Carta </option>
-                    <option value="Comédia dramática">Comédia dramática</option>
-                    <option value="Conto">Conto</option>
-                    <option value="Crônica">Crônica</option>
-                    <option value="Drama">Drama</option>
-                    <option value="Drama (Teatro)">Drama (Teatro)</option>
-                    <option value="Ensaio">Ensaio</option>
-                    <option value="História em Quadrinhos (HQ)">História em Quadrinhos (HQ)</option>
-                    <option value="Jurídico">Jurídico</option>
-                    <option value="Literatura fantástica">Literatura fantástica</option>
-                    <option value="Literatura Infantil">Literatura Infantil</option>
-                    <option value="Literatura Infanto-Juvenil">Literatura Infanto-Juvenil</option>
-                    <option value="Literatura nacional">Literatura nacional</option>
-                    <option value="Médico">Médico</option>
-                    <option value="Memórias">Memórias</option>
-                    <option value="Novela">Novela</option>
-                    <option value="Poesia">Poesia</option>
-                    <option value="Policial">Policial</option>
-                    <option value="Psicológico">Psicológico</option>
-                    <option value="Romance">Romance </option>
-                    <option value="Romântico">Romântico</option>
-                    <option value="Suspense">Suspense</option>
-                    <option value="Terror">Terror</option>
-                </select>
-            </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Pellentesque orci turpis, imperdiet sed lacus eget.</p>
+                  </div>
+            
+                  <div class="right-side">
+                    <h3>Identificação do Livro</h3>
+            
+                    <input class="input-style" type="text" placeholder="Serie...">
+                    <input class="input-style" type="text" placeholder="Tombo...">
+            
+                    <input class="input-style" type="text" placeholder="Classificação...">
+         
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Pellentesque orci turpis, imperdiet sed lacus eget.</p>
+            
+                    <button class="btn" type="submit"><i class="fa fa-save"></i>Salvar</button>
+                  </div>
+            
+                  <a>
+                    <i id="icon-close" class="fa fa-times"></i>
+                  </a>
+                </div>
+              </div>
         </form>
-    </div>
-
-    <div class="modal-footer">
-      <button type="button" class="btn-form btn-outline-none" (click)="modal.close('Save')">
-        <i class="fa fa-plus"></i>
-        Salvar</button>
     </div>
 </ng-template>        

@@ -355,6 +355,14 @@ tr {
     width: 100%;
 }
 
+.modal-content form {
+    padding: 0 !important;
+}
+
+.modal-body {
+    padding: 0;
+}
+
    .modal-header {
     justify-content: flex-start;
 }
@@ -405,26 +413,7 @@ tr {
     width: 100%;
 }
 
-   .btn-form {
-    background-color: transparent;
-    border: 1px solid #eee;
-    border-radius: 25px;
-    font-family: Nunito;
-    font-size: 14px;
-    font-weight: 700;
-    height: 40px;
-    letter-spacing: 1px;
-    margin: 15px 0px 15px 0px;
-    padding: 10px 0px 10px 0px;
-    transition: 0.3s;
-    width: 100%;
-}
 
-   .btn-form:hover {
-    background-color: rgb(207, 207, 207);
-    color: #0079bd;
-    transition: 0.3s;
-}
 
    .btn-form:hover i {
     color: #0079bd;
