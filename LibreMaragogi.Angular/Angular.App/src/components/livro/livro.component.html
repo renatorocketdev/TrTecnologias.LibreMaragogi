@@ -1,4 +1,3 @@
-
 <div class="top-bar">
     <h3>Livros</h3>
 
@@ -8,7 +7,7 @@
 <div class="actions">
     <form>
         <i id="input-icon" class="fa fa-sort"></i>
-        <select>      
+        <select class="select-filter">      
             <option>Todos os campos</option>      
             <option value="Assunto1">Assunto 1</option>
             <option value="Assunto2">Assunto 2</option>
@@ -20,7 +19,7 @@
     </form>
     <form>                    
         <i id="input-icon" class="fa fa-search"></i>
-        <input type="text" placeholder="Procurar livro...">
+        <input class="input-search" type="text" placeholder="Procurar livro...">
     </form>    
 
     <button class="btn">Pesquisar</button>
@@ -125,21 +124,24 @@
     <div class="modal-body">
         <form class="modal-form" [formGroup]='livrosForm'>
             <div class="form-group">
-                <input class="form-control" type="text" placeholder="Série" formControlName='serie'/>
-                <input class="form-control" type="text" placeholder="Tombo" formControlName='tombo'/>
-                <input class="form-control" type="text" placeholder="Classificação" formControlName='classificacao'/>
+                <input class="form-input form-control" type="text" placeholder="Série" formControlName='serie'/>
+                <input class="form-input form-control" type="text" placeholder="Tombo" formControlName='tombo'/>
+                <input class="form-input form-control" type="text" placeholder="Classificação" formControlName='classificacao'/>
             </div>
+
             <div  class="form-group">
-                <input class="form-control" type="text" placeholder="Título" formControlName='titulo'/>
-                <input class="form-control" type="text" placeholder="Autor" formControlName='autor'/>
-                <input asp-for="Editora" class="form-control" type="text" placeholder="Editora" formControlName='editora'/>
+                <input class="form-input form-control" type="text" placeholder="Título" formControlName='titulo'/>
+                <input class="form-input form-control" type="text" placeholder="Autor" formControlName='autor'/>
+                <input class="form-input form-control" type="text" placeholder="Editora" formControlName='editora' asp-for="Editora"/>
+
             </div>
         
-            <div>
-                <input asp-for="Ano" class="form-control" type="text" placeholder="Ano" formControlName='ano'/>
-                <input asp-for="Exemplares" class="form-control" type="number" placeholder="Quantidade de Exemplares" formControlName='exemplares'/>
-                <input asp-for="Volume" class="form-control" type="text" placeholder="Volume" formControlName='volume'/>
+            <div class="form-group">
+                <input asp-for="Ano" class="form-input form-control" type="text" placeholder="Ano" formControlName='ano'/>
+                <input asp-for="Exemplares" class="form-input form-control" type="number" placeholder="Quantidade de Exemplares" formControlName='exemplares'/>
+                <input asp-for="Volume" class="form-input form-control" type="text" placeholder="Volume" formControlName='volume'/>
             </div>
+
             <div class="form-group">
                 <select formControlName='categoria'>
                     <option value="">Assunto</option>
@@ -207,6 +209,8 @@
     </div>
 
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save')">Salvar</button>
+      <button type="button" class="btn-form btn-outline-none" (click)="modal.close('Save')">
+        <i class="fa fa-plus"></i>
+        Salvar</button>
     </div>
 </ng-template>        

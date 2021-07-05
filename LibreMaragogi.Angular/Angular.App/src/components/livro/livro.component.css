@@ -22,7 +22,10 @@
 
     background-color: #0079bd;
     color: #fff;
+}
 
+.btn:hover i {
+    color: #fff;
 }
 
 /* #endregion TOPBAR */
@@ -62,7 +65,7 @@ form {
     color: #bdbdbd;
 }
 
-select {
+.select-filter {
     cursor: pointer;
     background-color: #ffffff;
     border: none;
@@ -77,7 +80,7 @@ select {
     text-indent: 0.01px;
 }
 
-input {
+.input-search {
     width: 100%;
     font-family: Nunito;
     height: 35px;

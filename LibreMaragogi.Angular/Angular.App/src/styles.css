@@ -343,31 +343,94 @@ tr {
 
 /* #region MODAL POPUP */
 .modal-content {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.2);
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    outline: 0;
+    pointer-events: auto;
+    position: relative;
+    width: 100%;
 }
 
-.modal-header {
+   .modal-header {
     justify-content: flex-start;
 }
 
-.modal-header h4 {
+   .modal-header h4 {
+    color: #5a5a5a;
     font-family: Nunito;
     font-size: 18px;
     font-weight: 800;
     letter-spacing: 1px;
-    color: #5a5a5a;
-}
 
-#icon-title {
+}
+   #icon-title {
+    color: #5a5a5a;
+    font-size: 19px;
     margin: 0px 35px 0px 15px;
     width: 5px;
-    font-size: 19px;
-    color: #5a5a5a;
+}
+   .modal-form {
+    display: flex;
+    width: 100% !important;
 }
 
-.modal-form {
-    background-color: red;
-    width: 100% !important;
-    display: flex;
+   .form-group input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    color: #bdbdbd;
+    font-family: Nunito;
+    height: 37px;
+    margin: 0px 0px 5px 0px !important;
+    padding: 0px 0px 0px 15px;
+    width: 100%;
+}
+
+   .form-group select {
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    color: #7a7a7a;
+    cursor: pointer;
+    font-family: Nunito;
+    font-size: 12px;
+    font-weight: 600;
+    height: 37px;
+    padding: 0px 0px 0px 10px;
+    text-indent: 0.01px;
+    width: 100%;
+}
+
+   .btn-form {
+    background-color: transparent;
+    border: 1px solid #eee;
+    border-radius: 25px;
+    font-family: Nunito;
+    font-size: 14px;
+    font-weight: 700;
+    height: 40px;
+    letter-spacing: 1px;
+    margin: 15px 0px 15px 0px;
+    padding: 10px 0px 10px 0px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+   .btn-form:hover {
+    background-color: rgb(207, 207, 207);
+    color: #0079bd;
+    transition: 0.3s;
+}
+
+   .btn-form:hover i {
+    color: #0079bd;
+}
+
+   .btn-form i {
+    color: #000;
 }
 /* #endregion MODAL POPUP */
