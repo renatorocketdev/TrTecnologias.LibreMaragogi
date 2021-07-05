@@ -31,7 +31,7 @@ export class LivroComponent implements OnInit {
   }
 
   open(content: any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+    this.modalService.open(content, {windowClass: 'diabo-class'}).result.then((result) => {
       if(result == 'Save'){
         console.log(this.livrosForm);
       }

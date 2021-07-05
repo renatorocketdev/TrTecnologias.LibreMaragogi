@@ -1,8 +1,14 @@
 /* Botão Adicionar */
+::ng-deep .diabo-class .modal-dialog { 
+    max-width: 80%;
+    width: 80%;
+}
+
 .btn {
     font-family: Nunito;
-    font-size: 13px;
-    font-weight: 500;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 12px;
 
     min-width: 150px;
     min-height: 35px;
@@ -12,17 +18,18 @@
 
     border: #7a7a7a73 1px solid;
     background-color: transparent;
-    color: #0079bd;
+    color: #5a5a5a;    
 }
 
 .btn:hover {
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    color: #0079bd;
+    background-color: rgb(207, 207, 207);
+    border: none;
+    border-radius: 25px;
+}
 
-    background-color: #0079bd;
+.btn:hover i {
     color: #fff;
-
 }
 
 /* #endregion TOPBAR */
@@ -62,7 +69,7 @@ form {
     color: #bdbdbd;
 }
 
-select {
+.select-filter {
     cursor: pointer;
     background-color: #ffffff;
     border: none;
@@ -77,7 +84,7 @@ select {
     text-indent: 0.01px;
 }
 
-input {
+.input-search {
     width: 100%;
     font-family: Nunito;
     height: 35px;
@@ -92,3 +99,213 @@ input {
 .table {
     border-radius: 10px;
 }
+
+/*#region Popup Css*/
+.bg-modal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.container-popup {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+}
+
+.left-side {
+    background-color: #fff;
+    width: 50%;
+    padding: 40px;
+    border-radius: 10px 0px 0px 10px;
+    border-right: 10px solid #0079bd;
+}
+
+.left-side h3 {
+    font-family: Nunito;
+    font-size: 17px;
+    color: #5a5a5a;
+    text-align: start;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid #eee;
+}
+
+.left-side p {
+    font-family: Nunito;
+    font-size: 12px;
+    color: #d80000;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 15px;
+    padding: 10px 10px 0px 10px;
+
+    border-top: 1px solid #eee;
+}
+
+.left-side .input-style {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.left-side .input-style::placeholder {
+    color: #bbb;
+} 
+
+.left-side .two-fields-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.left-side .two-fields-row .input-style {
+    width: 45%;
+}
+
+.left-side .two-fields-row select {
+    width: 45%;
+}
+
+.left-side select {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.right-side {
+    background-image: url('https://tympanus.net/Freebies/Sedna/img/hero.jpg');
+    background-size: cover;
+    width: 50%;
+    padding: 40px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.right-side #icon-close {
+    position: absolute;
+    top: 10px;
+    left: 370px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.right-side h3 {
+    font-family: Nunito;
+    font-size: 17px;
+    color: #fff;
+    text-align: start;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid #fff;
+}
+
+.right-side p {
+    font-family: Nunito;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 15px;
+    padding: 10px 10px 0px 10px;
+
+    border-top: 1px solid #aaa;
+}
+
+.right-side .input-style {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.right-side .input-style::placeholder {
+    color: #fff;
+} 
+
+.right-side .two-fields-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.right-side .two-fields-row .input-style {
+    width: 45%;
+}
+
+.right-side .two-fields-row select {
+    width: 45%;
+}
+
+.right-side select {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.right-side .btn {
+    border-radius: 25px;
+    margin: 15px 0px 15px 0px;
+    font-family: Nunito;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 12px;
+    border: none;
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.right-side .btn i {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.right-side .btn:hover {
+    color: #0079bd;
+    background-color: rgb(207, 207, 207);
+    border: none;
+    border-radius: 25px;
+}
+
+.right-side .btn:hover i {
+    color: #0079bd;
+}
+
+#icon-close {
+    font-size: 17px;
+    color: #fff;
+    position: relative;
+    margin-right: -14px;
+    top: 10px;
+    left: -25px;
+    transition: 0.3s;
+}
+
+.container-popup a {
+    cursor: pointer;
+}
+
+.container-popup a #icon-close:hover {
+    color: #0079bd;
+}
+
+/*#endregion Popup Css*/

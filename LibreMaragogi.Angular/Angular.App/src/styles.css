@@ -341,3 +341,85 @@ tr {
     margin-right: 10px;
 }
 
+/* #region MODAL POPUP */
+.modal-content {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    outline: 0;
+    pointer-events: auto;
+    position: relative;
+    width: 100%;
+}
+
+.modal-content form {
+    padding: 0 !important;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+   .modal-header {
+    justify-content: flex-start;
+}
+
+   .modal-header h4 {
+    color: #5a5a5a;
+    font-family: Nunito;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+}
+   #icon-title {
+    color: #5a5a5a;
+    font-size: 19px;
+    margin: 0px 35px 0px 15px;
+    width: 5px;
+}
+   .modal-form {
+    display: flex;
+    width: 100% !important;
+}
+
+   .form-group input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    color: #bdbdbd;
+    font-family: Nunito;
+    height: 37px;
+    margin: 0px 0px 5px 0px !important;
+    padding: 0px 0px 0px 15px;
+    width: 100%;
+}
+
+   .form-group select {
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    color: #7a7a7a;
+    cursor: pointer;
+    font-family: Nunito;
+    font-size: 12px;
+    font-weight: 600;
+    height: 37px;
+    padding: 0px 0px 0px 10px;
+    text-indent: 0.01px;
+    width: 100%;
+}
+
+
+
+   .btn-form:hover i {
+    color: #0079bd;
+}
+
+   .btn-form i {
+    color: #000;
+}
+/* #endregion MODAL POPUP */
