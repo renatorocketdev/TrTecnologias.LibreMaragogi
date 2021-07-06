@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { LivroService } from 'src/services/livro.service';
 
 @Component({
   selector: 'app-livro',
@@ -10,9 +11,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class LivroComponent implements OnInit {
   livrosForm!: FormGroup;
 
-  constructor(private modalService: NgbModal, private fb: FormBuilder) { 
+  constructor(private modalService: NgbModal, private fb: FormBuilder, private service: LivroService) { 
     this.livrosForm = this.fb.group({
-      livrosId: [''],
+      livrosId: 0,
       titulo: [''],
       autor: [''],
       categoria: [''],
@@ -28,6 +29,17 @@ export class LivroComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onSubmit(){
+    console.log(this.livrosForm.value);
+    
+    this.service.post(this.livrosForm.value).subscribe(
+      (response) => {
+        console.log(response);
+    }, (erro: any) => {
+      console.log(erro);
+    });
   }
 
   open(content: any) {

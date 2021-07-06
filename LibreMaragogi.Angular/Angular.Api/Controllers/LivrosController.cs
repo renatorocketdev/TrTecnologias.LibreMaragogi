@@ -48,7 +48,7 @@ namespace libre_api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(Livro livro){
+        public IActionResult Post([FromBody] Livro livro){
             db.Livros.Add(livro);
             db.SaveChanges();
             return Ok(livro);

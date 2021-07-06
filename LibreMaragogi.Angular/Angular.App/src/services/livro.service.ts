@@ -4,7 +4,10 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Livro } from 'src/models/Livro';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
+
 export class LivroService {
 
     constructor(private client: HttpClient) { }
@@ -14,4 +17,8 @@ export class LivroService {
     getAll(): Observable<Livro[]>{
         return this.client.get<Livro[]>(`${this.url}`);
     }  
+
+    post(livro: Livro) {
+        return this.client.post(`${this.url}`, livro);
+    }
 }
