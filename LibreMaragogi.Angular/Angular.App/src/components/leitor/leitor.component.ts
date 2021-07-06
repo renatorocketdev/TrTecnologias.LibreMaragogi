@@ -12,8 +12,19 @@ export class LeitorComponent implements OnInit {
 
   constructor(private modalService: NgbModal, private fb: FormBuilder) { 
     this.leitoresForm = this.fb.group({
-      livrosId: [''],      
-      classificacao: ['']
+      leitoresId: [''],      
+      nome: [''],
+      email: [''],
+      nascimento: [''],
+      cpf: [''],
+      telefone: [''],
+      cep: [''],
+      numero: [''],
+      logradouro: [''],
+      senha: [''],
+      area: [''],
+      profissao: [''],
+      sexo: ['']
     });
   }
 

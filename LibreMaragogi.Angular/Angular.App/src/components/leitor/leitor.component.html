@@ -30,6 +30,7 @@
               <th>Nome Completo</th>
               <th>CPF</th>
               <th>Data de Nascimento</th>
+              <th>Ação</th>
           </tr>
       </thead>
 
@@ -39,8 +40,8 @@
             <td>000.000.000-00</td>  
             <td>19/12/1535</td>  
             <td>
-                <a><i class="fa fa-pencil"></i></a>
-                <a><i class="fa fa-minus"></i></a>
+              <a title="Editar"><i class="fa fa-pencil"></i></a>
+              <a title="Remover"><i class="fa fa-minus"></i></a>
             </td>
           </tr>  
           
@@ -49,8 +50,8 @@
             <td>000.000.000-00</td>  
             <td>19/12/1535</td>  
             <td>
-                <a><i class="fa fa-pencil"></i></a>
-                <a><i class="fa fa-minus"></i></a>
+              <a title="Editar"><i class="fa fa-pencil"></i></a>
+              <a title="Remover"><i class="fa fa-minus"></i></a>
             </td>
           </tr> 
 
@@ -59,8 +60,8 @@
             <td>000.000.000-00</td>  
             <td>19/12/1535</td>  
             <td>
-                <a><i class="fa fa-pencil"></i></a>
-                <a><i class="fa fa-minus"></i></a>
+              <a title="Editar"><i class="fa fa-pencil"></i></a>
+              <a title="Remover"><i class="fa fa-minus"></i></a>
             </td>
           </tr> 
       </tbody>
@@ -77,24 +78,23 @@
                   <h3>Informações Gerais</h3>
           
                   <input class="input-style" type="text" placeholder="Nome Completo...">
-                  <input class="input-style" type="email" placeholder="E-mail...">
 
                   <div class="two-fields-row">
-                    <input class="input-style" type="date" placeholder="Data de Nascimento">
+                    <input class="input-style" type="text"
+                    placeholder="Data de Nascimento"
+                    onfocus="(this.type='date')"
+                    onblur="(this.type='text')"> 
+
                     <input class="input-style" type="text" placeholder="CPF...">
                   </div>
 
                   <div class="two-fields-row">
-                    <input class="input-style" type="text" placeholder="Area de Interesse">
-
                     <input class="input-style" type="text" placeholder="CEP">
+                    <input class="input-style" type="text" placeholder="Número...">
                   </div>
 
-                  <div class="two-fields-row">
-                    <input class="input-style" type="text" placeholder="Número...">
-                    <input class="input-style" type="text" placeholder="Logradouro...">
-   
-                  </div>
+                  <input class="input-style" type="text" placeholder="Logradouro...">
+
                   <div class="two-fields-row">
                     <input class="input-style" type="password" placeholder="Senha...">
                     <input class="input-style" type="password" placeholder="Confirmar Senha...">
@@ -107,7 +107,10 @@
           
                 <div class="right-side">
                   <h3>Informações Pessoais</h3>
-          
+
+                  <input class="input-style" type="email" placeholder="E-mail...">
+                  <input class="input-style" type="tel" placeholder="Telefone...">
+
                   <select>      
                     <option>Sexo</option>      
                     <option value="Feminino">Feminino</option>
@@ -115,12 +118,12 @@
                   </select>
 
                   <input class="input-style" type="text" placeholder="Profissão...">
-                  <input class="input-style" type="number" placeholder="Telefone...">
+                  <input class="input-style" type="text" placeholder="Area de Interesse">
                  
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Pellentesque orci turpis, imperdiet sed lacus eget.</p>
           
-                  <button class="btn" type="submit"><i class="fa fa-save"></i>Salvar</button>
+                  <button class="btn" type="submit"><i class="fa fa-save"></i>Adicionar Leitor</button>
                 </div>
           
                 <a (click)="close(content)">
