@@ -37,4 +37,8 @@ export class LivroComponent implements OnInit {
       }
     });
   }
+
+  close(content: any) {
+    this.modalService.dismissAll()
+      };
 }

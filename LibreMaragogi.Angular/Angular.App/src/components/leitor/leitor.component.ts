@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-leitor',
@@ -6,10 +8,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./leitor.component.css']
 })
 export class LeitorComponent implements OnInit {
+  leitoresForm!: FormGroup;
 
-  constructor() { }
+  constructor(private modalService: NgbModal, private fb: FormBuilder) { 
+    this.leitoresForm = this.fb.group({
+      livrosId: [''],      
+      classificacao: ['']
+    });
+  }
 
   ngOnInit() {
   }
 
+  open(content: any) {
+    this.modalService.open(content, {windowClass: 'diabo-class'}).result.then((result) => {
+      if(result == 'Save'){
+        console.log(this.leitoresForm);
+      }
+    });
+  }
+
+  close(content: any) {
+    this.modalService.dismissAll()
+      };
 }
