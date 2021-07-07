@@ -60,34 +60,34 @@
 <!--MODAL POPUP-->
 <ng-template #content let-modal>
     <div class="modal-body">
-        <form class="modal-form" [formGroup]='livrosForm'>
+        <form class="modal-form" [formGroup]='livrosForm' (submit)="onSubmit()">
             <div class="bg-modal">
                 <div class="container-popup">
                   <div class="left-side">
                     <h3>Informações Gerais do Livro</h3>
             
-                    <input class="input-style" type="text" placeholder="Título... *">
+                    <input class="input-style" type="text" placeholder="Título... *" formControlName='titulo'>
             
                     <div class="two-fields-row">
-                        <input class="input-style" type="text" placeholder="Autor... *">
-                        <input class="input-style" type="text" placeholder="Editora...">
+                        <input class="input-style" type="text" placeholder="Autor... *" formControlName='autor'>
+                        <input class="input-style" type="text" placeholder="Editora..." formControlName='editora'>
                     </div>
 
                     <div class="two-fields-row">
-                        <select>      
-                        <option>Assunto I *</option>      
-                        <option value="Assunto1">Assunto 1</option>
+                        <select formControlName='categoria'>      
+                          <option>Assunto I *</option>      
+                          <option value="Assunto1">Assunto 1</option>
                         </select>
 
-                        <select>      
-                        <option>Assunto II</option>      
-                        <option value="Assunto2">Assunto 2</option>
+                        <select  formControlName='categoria2'>      
+                            <option>Assunto II</option>      
+                            <option value="Assunto2">Assunto 2</option>
                         </select>
                     </div>
             
-                    <input class="input-style" type="text" placeholder="Ano de Lançamento...">
-                    <input class="input-style" type="text" placeholder="Exemplares... *">
-                    <input class="input-style" type="text" placeholder="Volume...">
+                    <input class="input-style" type="text" placeholder="Ano de Lançamento..." formControlName='ano'>
+                    <input class="input-style" type="text" placeholder="Exemplares... *" formControlName='exemplares'>
+                    <input class="input-style" type="text" placeholder="Volume..." formControlName='volume'>
 
                     <p>Caro usuário, campos contento ( * ) devem ser 
                         obrigatoriamente preenchidos.</p> 
@@ -95,11 +95,11 @@
             
                   <div class="right-side">
                     <h3>Identificação do Livro</h3>
+           
+                    <input class="input-style" type="text" placeholder="Serie... *" formControlName='serie'>
+                    <input class="input-style" type="text" placeholder="Tombo... *" formControlName='tombo'>
             
-                    <input class="input-style" type="text" placeholder="Serie... *">
-                    <input class="input-style" type="text" placeholder="Tombo... *">
-            
-                    <input class="input-style" type="text" placeholder="Classificação... *">
+                    <input class="input-style" type="text" placeholder="Classificação... *" formControlName='classificacao'>
          
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                       Pellentesque orci turpis, imperdiet sed lacus eget.</p>
