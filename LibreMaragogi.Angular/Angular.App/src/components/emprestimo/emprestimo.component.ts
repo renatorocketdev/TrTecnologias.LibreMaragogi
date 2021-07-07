@@ -13,7 +13,12 @@ export class EmprestimoComponent implements OnInit {
   constructor(private modalService: NgbModal, private fb: FormBuilder) { 
     this.emprestimosForm = this.fb.group({
       emprestimosId: [''],
-      classificacao: ['']
+      usuario: [''],
+      livro: [''],
+      dataEmprestimo: [''],
+      dataDevolucao: [''],
+      observacao: ['']
+
     });
   }
 

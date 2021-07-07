@@ -12,12 +12,15 @@
       <i id="input-icon" class="fa fa-sort"></i>
       <select class="select-filter">      
           <option>Todos os campos</option>      
-          <option value="Assunto1">Assunto 1</option>          
+          <option value="ID">ID</option>          
+          <option value="Nome">Nome Completo</option>          
+          <option value="CPF">CPF</option>          
+          <option value="Nascimento">Data de Nascimento</option>          
       </select>
   </form>
   <form>                    
       <i id="input-icon" class="fa fa-search"></i>
-      <input class="input-search" type="text" placeholder="Procurar leitor...">
+      <input class="input-search" type="text" placeholder="Procurar por leitor...">
   </form>    
 
   <button class="btn">Pesquisar</button>
@@ -27,15 +30,17 @@
   <table class="styled-table">
       <thead>
           <tr>
-              <th>Nome Completo</th>
-              <th>CPF</th>
-              <th>Data de Nascimento</th>
-              <th>Ação</th>
+            <th>ID Leitor</th>
+            <th>Nome Completo</th>
+            <th>CPF</th>
+            <th>Data de Nascimento</th>
+            <th>Ação</th>
           </tr>
       </thead>
 
       <tbody>
           <tr>      
+            <td>000</td>   
             <td>Renato Alves</td>   
             <td>000.000.000-00</td>  
             <td>19/12/1535</td>  
@@ -46,6 +51,7 @@
           </tr>  
           
           <tr>      
+            <td>000</td>   
             <td>Renato Alves</td>   
             <td>000.000.000-00</td>  
             <td>19/12/1535</td>  
@@ -53,9 +59,10 @@
               <a title="Editar"><i class="fa fa-pencil"></i></a>
               <a title="Remover"><i class="fa fa-minus"></i></a>
             </td>
-          </tr> 
+          </tr>  
 
           <tr>      
+            <td>000</td>   
             <td>Renato Alves</td>   
             <td>000.000.000-00</td>  
             <td>19/12/1535</td>  
@@ -63,7 +70,7 @@
               <a title="Editar"><i class="fa fa-pencil"></i></a>
               <a title="Remover"><i class="fa fa-minus"></i></a>
             </td>
-          </tr> 
+          </tr>  
       </tbody>
   </table>
 </div>
@@ -75,46 +82,47 @@
           <div class="bg-modal">
               <div class="container-popup">
                 <div class="left-side">
-                  <h3>Informações Gerais</h3>
+                  <h3>Informações Gerais do Leitor</h3>
           
-                  <input class="input-style" type="text" placeholder="Nome Completo...">
+                  <input class="input-style" type="text" placeholder="Nome Completo... *">
 
                   <div class="two-fields-row">
                     <input class="input-style" type="text"
-                    placeholder="Data de Nascimento"
+                    placeholder="Data de Nascimento... *"
                     onfocus="(this.type='date')"
                     onblur="(this.type='text')"> 
 
-                    <input class="input-style" type="text" placeholder="CPF...">
+                    <input class="input-style" type="text" placeholder="CPF... *">
                   </div>
 
                   <div class="two-fields-row">
-                    <input class="input-style" type="text" placeholder="CEP">
-                    <input class="input-style" type="text" placeholder="Número...">
+                    <input class="input-style" type="text" placeholder="CEP... *">
+                    <input class="input-style" type="text" placeholder="Número... *">
                   </div>
 
-                  <input class="input-style" type="text" placeholder="Logradouro...">
+                  <input class="input-style" type="text" placeholder="Logradouro... *">
 
                   <div class="two-fields-row">
-                    <input class="input-style" type="password" placeholder="Senha...">
-                    <input class="input-style" type="password" placeholder="Confirmar Senha...">
+                    <input class="input-style" type="password" placeholder="Senha... *">
+                    <input class="input-style" type="password" placeholder="Confirmar Senha... *">
    
                   </div>
         
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Pellentesque orci turpis, imperdiet sed lacus eget.</p>
+                  <p>Caro usuário, campos contento ( * ) devem ser 
+                    obrigatoriamente preenchidos.</p>    
                 </div>
           
                 <div class="right-side">
                   <h3>Informações Pessoais</h3>
 
-                  <input class="input-style" type="email" placeholder="E-mail...">
+                  <input class="input-style" type="email" placeholder="E-mail... *">
                   <input class="input-style" type="tel" placeholder="Telefone...">
 
                   <select>      
                     <option>Sexo</option>      
                     <option value="Feminino">Feminino</option>
                     <option value="Masculino">Masculino</option>
+                    <option value="Não Definido">Não Definido</option>
                   </select>
 
                   <input class="input-style" type="text" placeholder="Profissão...">
@@ -123,7 +131,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Pellentesque orci turpis, imperdiet sed lacus eget.</p>
           
-                  <button class="btn" type="submit"><i class="fa fa-save"></i>Adicionar Leitor</button>
+                  <button class="btn" type="submit"><i class="fa fa-save"></i>Salvar Leitor</button>
                 </div>
           
                 <a (click)="close(content)">

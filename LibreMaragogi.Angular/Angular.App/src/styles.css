@@ -318,8 +318,14 @@ tr:hover {
 
 .styled-table th,
 tr {
+    transition: 0.3s;
+    cursor: pointer;
     border-bottom-color: #84848426;
     text-align: justify;
+}
+
+.styled-table th:hover {
+    background-color: #84848426;
 }
 
 .styled-table td a i {
@@ -636,9 +642,13 @@ form {
     height: 35px;
     border: none;
     border-bottom: 1px solid #fff;
-    color: #fff;
     margin-bottom: 20px;
+    color: #fff;
     background-color: transparent;
+}
+
+.right-side select option {
+    background-color: #bbb;
 }
 
 .right-side .btn {

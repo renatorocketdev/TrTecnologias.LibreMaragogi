@@ -22,7 +22,7 @@
     </form>
     <form>                    
         <i id="input-icon" class="fa fa-search"></i>
-        <input class="input-search" type="text" placeholder="Procurar livro...">
+        <input class="input-search" type="text" placeholder="Procurar por livro...">
     </form>    
 
     <button class="btn">Pesquisar</button>
@@ -32,6 +32,7 @@
     <table class="styled-table">
         <thead>
             <tr>
+                <th>ID Livro</th>
                 <th>Título</th>
                 <th>Autor</th>
                 <th>Assunto I</th>
@@ -42,6 +43,7 @@
 
         <tbody>
             <tr>
+                <td>1</td>
                 <td>Harry Potter: A Câmara Secreta</td>
                 <td>J.K. Rowling</td>
                 <td>Aventura</td>
@@ -50,69 +52,7 @@
                     <a title="Editar"><i class="fa fa-pencil"></i></a>
                 <a title="Remover"><i class="fa fa-minus"></i></a>
                 </td>
-            </tr>
-            <tr>
-                <td>Harry Potter: A Câmara Secreta</td>
-                <td>J.K. Rowling</td>
-                <td>Aventura</td>
-                <td>9</td>
-                <td>
-                    <a title="Editar"><i class="fa fa-pencil"></i></a>
-                    <a title="Remover"><i class="fa fa-minus"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Harry Potter: A Câmara Secreta</td>
-                <td>J.K. Rowling</td>
-                <td>Aventura</td>
-                <td>9</td>
-                <td>
-                    <a title="Editar"><i class="fa fa-pencil"></i></a>
-                <a title="Remover"><i class="fa fa-minus"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Harry Potter: A Câmara Secreta</td>
-                <td>J.K. Rowling</td>
-                <td>Aventura</td>
-                <td>9</td>
-                <td>
-                    <a title="Editar"><i class="fa fa-pencil"></i></a>
-                <a title="Remover"><i class="fa fa-minus"></i></a>
-                </td>
-            </tr>
-            <tr class="active-row">
-                <td>Harry Potter: A Câmara Secreta</td>
-                <td>J.K. Rowling</td>
-                <td>Aventura</td>
-                <td>9</td>
-                <td>
-                    <a title="Editar"><i class="fa fa-pencil"></i></a>
-                <a title="Remover"><i class="fa fa-minus"></i></a>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Harry Potter: A Câmara Secreta</td>
-                <td>J.K. Rowling</td>
-                <td>Aventura</td>
-                <td>9</td>
-                <td>
-                    <a title="Editar"><i class="fa fa-pencil"></i></a>
-                <a title="Remover"><i class="fa fa-minus"></i></a>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Harry Potter: A Câmara Secreta</td>
-                <td>J.K. Rowling</td>
-                <td>Aventura</td>
-                <td>9</td>
-                <td>
-                    <a title="Editar"><i class="fa fa-pencil"></i></a>
-                <a title="Remover"><i class="fa fa-minus"></i></a>
-                </td>
-            </tr>
+            </tr>            
         </tbody>
     </table>
 </div>
@@ -126,16 +66,16 @@
                   <div class="left-side">
                     <h3>Informações Gerais do Livro</h3>
             
-                    <input class="input-style" type="text" placeholder="Título...">
+                    <input class="input-style" type="text" placeholder="Título... *">
             
                     <div class="two-fields-row">
-                        <input class="input-style" type="text" placeholder="Autor...">
+                        <input class="input-style" type="text" placeholder="Autor... *">
                         <input class="input-style" type="text" placeholder="Editora...">
                     </div>
 
                     <div class="two-fields-row">
                         <select>      
-                        <option>Assunto I</option>      
+                        <option>Assunto I *</option>      
                         <option value="Assunto1">Assunto 1</option>
                         </select>
 
@@ -146,25 +86,25 @@
                     </div>
             
                     <input class="input-style" type="text" placeholder="Ano de Lançamento...">
-                    <input class="input-style" type="text" placeholder="Exemplares...">
+                    <input class="input-style" type="text" placeholder="Exemplares... *">
                     <input class="input-style" type="text" placeholder="Volume...">
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Pellentesque orci turpis, imperdiet sed lacus eget.</p>
+                    <p>Caro usuário, campos contento ( * ) devem ser 
+                        obrigatoriamente preenchidos.</p> 
                   </div>
             
                   <div class="right-side">
                     <h3>Identificação do Livro</h3>
             
-                    <input class="input-style" type="text" placeholder="Serie...">
-                    <input class="input-style" type="text" placeholder="Tombo...">
+                    <input class="input-style" type="text" placeholder="Serie... *">
+                    <input class="input-style" type="text" placeholder="Tombo... *">
             
-                    <input class="input-style" type="text" placeholder="Classificação...">
+                    <input class="input-style" type="text" placeholder="Classificação... *">
          
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                       Pellentesque orci turpis, imperdiet sed lacus eget.</p>
             
-                    <button class="btn" type="submit"><i class="fa fa-save"></i>Salvar</button>
+                    <button class="btn" type="submit"><i class="fa fa-save"></i>Salvar Livro</button>
                   </div>
             
                   <a (click)="close(content)">
