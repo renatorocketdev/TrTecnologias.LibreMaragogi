@@ -1,55 +1,129 @@
-<div class="bg-modal">
-  <div class="modal">
-    <div class="modal-title">
-      <h6>Adicionar Livro</h6>
-      <i class="fa fa-times"></i>
-    </div>
+<div class="top-bar">
+  <h3>Registro de Devoluções</h3>
 
-    <div class="field-container">
-      <div class="title-entry">
-        <i id="input-icon-style" class="fa fa-times"></i>
-        <input class="input-style" type="text" placeholder="Título">
-      </div>
-
-      <div class="title-entry">
-        <i id="input-icon-style" class="fa fa-times"></i>
-        <input class="input-style" type="text" placeholder="Título">
-      </div>
-
-      <div class="title-entry">
-        <i id="input-icon-style" class="fa fa-times"></i>
-        <select>      
-          <option>Todos os campos</option>      
-          <option value="Assunto1">Assunto 1</option>
-          <option value="Assunto2">Assunto 2</option>
-          <option value="Titulo">Título</option>
-          <option value="Autor">Autor</option>
-          <option value="Tombo">Tombo</option>
-          <option value="Serie">Serie</option>
-      </select>
-      </div>
-
-      <div class="two-entry-row">
-        <div class="title-entry">
-          <i id="input-icon-style" class="fa fa-times"></i>
-          <select id="select-width">      
-            <option>Ano</option>      
-            <option value="Assunto1">Assunto 1</option>
-            <option value="Assunto2">Assunto 2</option>
-            <option value="Titulo">Título</option>
-            <option value="Autor">Autor</option>
-            <option value="Tombo">Tombo</option>
-            <option value="Serie">Serie</option>
-        </select>
-        </div>
-
-        <div id="entry-width" class="title-entry">
-          <i id="input-icon-style" class="fa fa-times"></i>
-          <input class="input-style" type="text" placeholder="Volume">
-        </div>
-      </div>
-  </div>
-
-    
-  </div>
+  <button class="btn" (click)="open(content)">
+      <i class="fa fa-plus"></i>
+      Nova Devolução
+  </button>
 </div>
+      
+<div class="actions">
+  <form>
+      <i id="input-icon" class="fa fa-sort"></i>
+      <select class="select-filter">      
+          <option>Todos os campos</option>      
+          <option value="ID">ID</option>          
+          <option value="Nome">Nome Completo</option>          
+          <option value="Livro">Livro</option>          
+          <option value="Entrega">Data de Entrega</option>          
+      </select>
+  </form>
+  <form>                    
+      <i id="input-icon" class="fa fa-search"></i>
+      <input class="input-search" type="text" placeholder="Procurar por devolução...">
+  </form>    
+
+  <button class="btn">Pesquisar</button>
+</div>        
+
+<div class="table">
+  <table class="styled-table">
+      <thead>
+          <tr>
+              <th>ID Devolução</th>
+              <th>Nome</th>
+              <th>Livro</th>
+              <th>Data de Entrega</th>
+              <th>Ação</th>
+          </tr>
+      </thead>
+
+      <tbody>
+          <tr>      
+            <td>1</td>   
+            <td>Renato Alves</td>   
+            <td>Harry Potter: A Câmara Secreta</td>  
+            <td>19/12/2021</td>  
+            <td>
+                <a title="Editar"><i class="fa fa-pencil"></i></a>
+                <a title="Remover"><i class="fa fa-minus"></i></a>
+                <a title="Renovar Empréstimo"><i class="fa fa-calendar-o"></i></a>
+            </td>
+          </tr>  
+
+          <tr>      
+            <td>3</td>   
+            <td>Renato Alves</td>   
+            <td>Harry Potter: A Câmara Secreta</td>  
+            <td>19/12/2021</td>  
+            <td>
+                <a title="Editar"><i class="fa fa-pencil"></i></a>
+                <a title="Remover"><i class="fa fa-minus"></i></a>
+                <a title="Renovar Empréstimo"><i class="fa fa-calendar-o"></i></a>
+            </td>
+          </tr> 
+
+          <tr>      
+            <td>2</td>   
+            <td>Renato Alves</td>   
+            <td>Harry Potter: A Câmara Secreta</td>  
+            <td>19/12/2021</td>  
+            <td>
+                <a title="Editar"><i class="fa fa-pencil"></i></a>
+                <a title="Remover"><i class="fa fa-minus"></i></a>
+                <a title="Renovar Empréstimo"><i class="fa fa-calendar-o"></i></a>
+            </td>
+          </tr> 
+      </tbody>
+  </table>
+</div>
+
+<!--MODAL POPUP-->
+<ng-template #content let-modal>
+  <div class="modal-body">
+      <form class="modal-form" [formGroup]='devolucoesForm'>
+          <div class="bg-modal">
+              <div class="container-popup">
+                <div class="left-side">
+                  <h3>Informações Gerais da Devolução</h3>
+          
+                  <select>      
+                    <option>Selecione um usuário *</option>      
+                    <option value="Feminino">usuário 1</option>
+                    <option value="Masculino">usuário 2</option>
+                  </select>
+
+                  <select>      
+                    <option>Selecione um livro *</option>      
+                    <option value="Feminino">livro 1</option>
+                    <option value="Masculino">livro 2</option>
+                  </select>
+
+                  <input class="input-style" type="text"
+                      placeholder="Data de Devolução *"
+                      onfocus="(this.type='date')"
+                      onblur="(this.type='text')">                  
+        
+                      <p>Caro usuário, campos contento ( * ) devem ser 
+                        obrigatoriamente preenchidos.</p> 
+                </div>
+          
+                <div class="right-side">
+                  <h3>Informações Detalhadas</h3>                    
+                  
+                  <input class="input-style" type="text" placeholder="Observações...">
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Pellentesque orci turpis, imperdiet sed lacus eget.</p>
+          
+                  <button class="btn" type="submit"><i class="fa fa-save"></i>Salvar Devolução</button>
+                </div>
+          
+                <a (click)="close(content)">
+                  <i id="icon-close" class="fa fa-times"></i>
+                </a>
+              </div>
+            </div>
+      </form>
+  </div>
+</ng-template>        

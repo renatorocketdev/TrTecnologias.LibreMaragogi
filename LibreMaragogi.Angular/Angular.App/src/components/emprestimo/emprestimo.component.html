@@ -1,3 +1,142 @@
-<p>
-  emprestimo works!
-</p>
+<div class="top-bar">
+  <h3>Registro de Emprestimos</h3>
+
+  <button class="btn" (click)="open(content)">
+      <i class="fa fa-plus"></i>
+      Novo Emprestimo
+  </button>
+</div>
+      
+<div class="actions">
+  <form>
+      <i id="input-icon" class="fa fa-sort"></i>
+      <select class="select-filter">      
+          <option>Todos os campos</option>      
+          <option value="ID">ID</option>          
+          <option value="Nome">Nome Completo</option>          
+          <option value="Livro">Livro</option>          
+          <option value="Emprestimo">Data de Empréstimo</option>          
+          <option value="Entrega">Data de Entrega</option>          
+      </select>
+  </form>
+  <form>                    
+      <i id="input-icon" class="fa fa-search"></i>
+      <input class="input-search" type="text" placeholder="Procurar por emprestimo...">
+  </form>    
+
+  <button class="btn">Pesquisar</button>
+</div>        
+
+<div class="table">
+  <table class="styled-table">
+      <thead>
+          <tr>
+              <th>ID Empréstimo</th>
+              <th>Nome Completo</th>
+              <th>Livro</th>
+              <th>Data de Empréstimo</th>
+              <th>Data de Entrega</th>
+              <th>Ação</th>
+          </tr>
+      </thead>
+
+      <tbody>
+          <tr>      
+            <td>1</td>   
+            <td>Renato Alves</td>   
+            <td>Harry Potter: A Câmara Secreta</td>  
+            <td>19/12/2020</td>  
+            <td>19/12/2021</td>  
+            <td>
+                <a title="Editar"><i class="fa fa-pencil"></i></a>
+                <a title="Remover"><i class="fa fa-minus"></i></a>
+                <a title="Renovar Empréstimo"><i class="fa fa-calendar-o"></i></a>
+            </td>
+          </tr>  
+
+          <tr>      
+            <td>3</td>   
+            <td>Renato Alves</td>   
+            <td>Harry Potter: A Câmara Secreta</td>  
+            <td>19/12/2020</td>  
+            <td>19/12/2021</td>  
+            <td>
+                <a title="Editar"><i class="fa fa-pencil"></i></a>
+                <a title="Remover"><i class="fa fa-minus"></i></a>
+                <a title="Renovar Empréstimo"><i class="fa fa-calendar-o"></i></a>
+            </td>
+          </tr> 
+
+          <tr>      
+            <td>2</td>   
+            <td>Renato Alves</td>   
+            <td>Harry Potter: A Câmara Secreta</td>  
+            <td>19/12/2020</td>  
+            <td>19/12/2021</td>  
+            <td>
+                <a title="Editar"><i class="fa fa-pencil"></i></a>
+                <a title="Remover"><i class="fa fa-minus"></i></a>
+                <a title="Renovar Empréstimo"><i class="fa fa-calendar-o"></i></a>
+            </td>
+          </tr> 
+      </tbody>
+  </table>
+</div>
+
+<!--MODAL POPUP-->
+<ng-template #content let-modal>
+  <div class="modal-body">
+      <form class="modal-form" [formGroup]='emprestimosForm'>
+          <div class="bg-modal">
+              <div class="container-popup">
+                <div class="left-side">
+                  <h3>Informações Gerais do Empréstimo</h3>
+          
+                  <select>      
+                    <option>Selecione um usuário *</option>      
+                    <option value="Feminino">usuário 1</option>
+                    <option value="Masculino">usuário 2</option>
+                  </select>
+
+                  <select>      
+                    <option>Selecione um livro *</option>      
+                    <option value="Feminino">livro 1</option>
+                    <option value="Masculino">livro 2</option>
+                  </select>
+
+                  <div class="two-fields-row">
+                    <input class="input-style" type="text"
+                      placeholder="Data do Empréstimo *"
+                      onfocus="(this.type='date')"
+                      onblur="(this.type='text')">
+
+                    <input class="input-style" type="text"
+                      placeholder="Data de Devolução"
+                      onfocus="(this.type='date')"
+                      onblur="(this.type='text')">                  
+                    
+                  </div>                  
+        
+                  <p>Caro usuário, campos contento ( * ) devem ser 
+                    obrigatoriamente preenchidos.</p> 
+                </div>
+          
+                <div class="right-side">
+                  <h3>Informações Detalhadas</h3>                    
+                  
+                  <input class="input-style" type="text" placeholder="Observações...">
+
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Pellentesque orci turpis, imperdiet sed lacus eget.</p>
+          
+                  <button class="btn" type="submit"><i class="fa fa-save"></i>Salvar Empréstimo</button>
+                </div>
+          
+                <a (click)="close(content)">
+                  <i id="icon-close" class="fa fa-times"></i>
+                </a>
+              </div>
+            </div>
+      </form>
+  </div>
+</ng-template>        

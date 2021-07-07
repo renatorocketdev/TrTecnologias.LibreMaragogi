@@ -1,3 +1,144 @@
-<p>
-  leitor works!
-</p>
+<div class="top-bar">
+  <h3>Registro de Leitores</h3>
+
+  <button class="btn" (click)="open(content)">
+      <i class="fa fa-plus"></i>
+      Novo Leitor
+  </button>
+</div>
+      
+<div class="actions">
+  <form>
+      <i id="input-icon" class="fa fa-sort"></i>
+      <select class="select-filter">      
+          <option>Todos os campos</option>      
+          <option value="ID">ID</option>          
+          <option value="Nome">Nome Completo</option>          
+          <option value="CPF">CPF</option>          
+          <option value="Nascimento">Data de Nascimento</option>          
+      </select>
+  </form>
+  <form>                    
+      <i id="input-icon" class="fa fa-search"></i>
+      <input class="input-search" type="text" placeholder="Procurar por leitor...">
+  </form>    
+
+  <button class="btn">Pesquisar</button>
+</div>        
+
+<div class="table">
+  <table class="styled-table">
+      <thead>
+          <tr>
+            <th>ID Leitor</th>
+            <th>Nome Completo</th>
+            <th>CPF</th>
+            <th>Data de Nascimento</th>
+            <th>Ação</th>
+          </tr>
+      </thead>
+
+      <tbody>
+          <tr>      
+            <td>000</td>   
+            <td>Renato Alves</td>   
+            <td>000.000.000-00</td>  
+            <td>19/12/1535</td>  
+            <td>
+              <a title="Editar"><i class="fa fa-pencil"></i></a>
+              <a title="Remover"><i class="fa fa-minus"></i></a>
+            </td>
+          </tr>  
+          
+          <tr>      
+            <td>000</td>   
+            <td>Renato Alves</td>   
+            <td>000.000.000-00</td>  
+            <td>19/12/1535</td>  
+            <td>
+              <a title="Editar"><i class="fa fa-pencil"></i></a>
+              <a title="Remover"><i class="fa fa-minus"></i></a>
+            </td>
+          </tr>  
+
+          <tr>      
+            <td>000</td>   
+            <td>Renato Alves</td>   
+            <td>000.000.000-00</td>  
+            <td>19/12/1535</td>  
+            <td>
+              <a title="Editar"><i class="fa fa-pencil"></i></a>
+              <a title="Remover"><i class="fa fa-minus"></i></a>
+            </td>
+          </tr>  
+      </tbody>
+  </table>
+</div>
+
+<!--MODAL POPUP-->
+<ng-template #content let-modal>
+  <div class="modal-body">
+      <form class="modal-form" [formGroup]='leitoresForm'>
+          <div class="bg-modal">
+              <div class="container-popup">
+                <div class="left-side">
+                  <h3>Informações Gerais do Leitor</h3>
+          
+                  <input class="input-style" type="text" placeholder="Nome Completo... *">
+
+                  <div class="two-fields-row">
+                    <input class="input-style" type="text"
+                    placeholder="Data de Nascimento... *"
+                    onfocus="(this.type='date')"
+                    onblur="(this.type='text')"> 
+
+                    <input class="input-style" type="text" placeholder="CPF... *">
+                  </div>
+
+                  <div class="two-fields-row">
+                    <input class="input-style" type="text" placeholder="CEP... *">
+                    <input class="input-style" type="text" placeholder="Número... *">
+                  </div>
+
+                  <input class="input-style" type="text" placeholder="Logradouro... *">
+
+                  <div class="two-fields-row">
+                    <input class="input-style" type="password" placeholder="Senha... *">
+                    <input class="input-style" type="password" placeholder="Confirmar Senha... *">
+   
+                  </div>
+        
+                  <p>Caro usuário, campos contento ( * ) devem ser 
+                    obrigatoriamente preenchidos.</p>    
+                </div>
+          
+                <div class="right-side">
+                  <h3>Informações Pessoais</h3>
+
+                  <input class="input-style" type="email" placeholder="E-mail... *">
+                  <input class="input-style" type="tel" placeholder="Telefone...">
+
+                  <select>      
+                    <option>Sexo</option>      
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Não Definido">Não Definido</option>
+                  </select>
+
+                  <input class="input-style" type="text" placeholder="Profissão...">
+                  <input class="input-style" type="text" placeholder="Area de Interesse">
+                 
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Pellentesque orci turpis, imperdiet sed lacus eget.</p>
+          
+                  <button class="btn" type="submit"><i class="fa fa-save"></i>Salvar Leitor</button>
+                </div>
+          
+                <a (click)="close(content)">
+                  <i id="icon-close" class="fa fa-times"></i>
+                </a>
+              </div>
+            </div>
+      </form>
+  </div>
+</ng-template>        

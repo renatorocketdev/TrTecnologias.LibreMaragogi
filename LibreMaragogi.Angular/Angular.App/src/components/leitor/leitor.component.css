@@ -1,0 +1,5 @@
+/* Define Tamanho da Modal */
+::ng-deep .diabo-class .modal-dialog { 
+    max-width: 80%;
+    width: 80%;
+}
