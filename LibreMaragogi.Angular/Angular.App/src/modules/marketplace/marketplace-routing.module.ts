@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MarketplaceModule } from './marketplace.module';
+import { MarketplaceComponent } from './marketplace.component';
 
 const routes: Routes = [
-  { path: '', component: MarketplaceModule }
+  { path: '', component: MarketplaceComponent }
 ];
 
 @NgModule({
