@@ -53,7 +53,6 @@ nav ul li:nth-child(2) {
     list-style-type: none;
     display: inline;
     border-radius: 0px;
-    border-right: #d8d8d869 1px solid;
 }
 
 nav ul li:nth-child(2):hover {
