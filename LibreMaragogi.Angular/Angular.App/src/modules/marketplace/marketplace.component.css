@@ -126,7 +126,7 @@ body, html {
     flex-direction: column;
     height: 100%;
     width: 30%;
-    margin: 50px 5px 0px 0px;
+    margin: 30px 5px 0px 0px;
 }
 
 nav {
@@ -223,7 +223,7 @@ ul li:hover a {
     border-radius: 25px;
     background-color: #fff;
     display: flex;
-    margin: 50px 10px 0px 10px;
+    margin: 30px 10px 0px 10px;
     padding: 0px 0px 0px 0px;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -420,8 +420,10 @@ ul li:hover a {
 }
 
 .pagination p {
-    letter-spacing: 15px;
+    letter-spacing: 12px;
     cursor: pointer;
+    margin: 20px 0px 0px 5px;
+    font-size: 12px;
 }
 
 .pagination p:hover {
@@ -505,12 +507,14 @@ footer h3 {
 }
 
 .contact-us h4 {
-    font-size: 16px;
-    color: #9a9a9a;        
+    font-size: 23px;
+    color: #ffffff;
     font-family: 'Nunito';
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.5px;
     margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .contact-us p {
@@ -518,10 +522,22 @@ footer h3 {
     font-weight: 600;
     letter-spacing: 0.5px;
     text-decoration: none;
-    color: #fff;
+    color: #8e8e8e;
     font-size: 14px;
     transition: 0.3s;
     padding: 5px;
+}
+
+.git-hub-us {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.git-hub-us p {
+    color: #fff;
+    line-height: 30px;
+    padding: 0px;
+    text-align: center;
 }
 
 .contact-us a {
@@ -529,7 +545,7 @@ footer h3 {
     font-weight: 800;
     letter-spacing: 0.5px;
     text-decoration: none;
-    color: #fff;
+    color: #8e8e8e;
     font-size: 14px;
     transition: 0.3s;
 }

@@ -345,12 +345,14 @@ footer h3 {
 }
 
 .contact-us h4 {
-    font-size: 16px;
-    color: #9a9a9a;        
+    font-size: 23px;
+    color: #ffffff;
     font-family: 'Nunito';
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.5px;
     margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .contact-us p {
@@ -358,10 +360,22 @@ footer h3 {
     font-weight: 600;
     letter-spacing: 0.5px;
     text-decoration: none;
-    color: #fff;
+    color: #8e8e8e;
     font-size: 14px;
     transition: 0.3s;
     padding: 5px;
+}
+
+.git-hub-us {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.git-hub-us p {
+    color: #fff;
+    line-height: 30px;
+    padding: 0px;
+    text-align: center;
 }
 
 .contact-us a {
@@ -369,7 +383,7 @@ footer h3 {
     font-weight: 800;
     letter-spacing: 0.5px;
     text-decoration: none;
-    color: #fff;
+    color: #8e8e8e;
     font-size: 14px;
     transition: 0.3s;
 }
