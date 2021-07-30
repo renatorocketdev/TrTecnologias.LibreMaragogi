@@ -42,17 +42,18 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Harry Potter: A Câmara Secreta</td>
-                <td>J.K. Rowling</td>
-                <td>Aventura</td>
-                <td>9</td>
+            <tr *ngFor="let livro of livros">
+                <td>{{ livro.livrosId }}</td>
+                <td>{{ livro.titulo }}</td>
+                <td>{{ livro.autor }}</td>
+                <td>{{ livro.categoria }}</td>
+                <td>{{ livro.exemplares }}</td>
                 <td>
                     <a title="Editar"><i class="fa fa-pencil"></i></a>
-                <a title="Remover"><i class="fa fa-minus"></i></a>
+                    <a title="Remover"><i class="fa fa-minus"></i></a>
+                    <a title="Remover"><i class="fa fa-minus"></i></a>
                 </td>
-            </tr>            
+            </tr>              
         </tbody>
     </table>
 </div>
@@ -107,7 +108,7 @@
                     <button class="btn" type="submit"><i class="fa fa-save"></i>Salvar Livro</button>
                   </div>
             
-                  <a (click)="close(content)">
+                  <a (click)="close">
                     <i id="icon-close" class="fa fa-times"></i>
                   </a>
                 </div>

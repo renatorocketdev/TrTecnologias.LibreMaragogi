@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Livro } from 'src/models/Livro';
 import { LivroService } from 'src/services/livro.service';
 
 @Component({
@@ -9,9 +10,17 @@ import { LivroService } from 'src/services/livro.service';
   styleUrls: ['./livro.component.css']
 })
 export class LivroComponent implements OnInit {
-  livrosForm!: FormGroup;
+  public livrosForm!: FormGroup;
+  public livros: Livro[] = [];
 
-  constructor(private modalService: NgbModal, private fb: FormBuilder, private service: LivroService) { 
+  constructor(private modalService: NgbModal, private fb: FormBuilder, private service: LivroService) {}
+
+  ngOnInit() {
+    this.getAllLivros();
+    this.group();
+  }
+
+  group(){
     this.livrosForm = this.fb.group({
       livrosId: 0,
       titulo: [''],
@@ -28,7 +37,15 @@ export class LivroComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  getAllLivros() {
+    this.service.getAll().subscribe(
+      (livros: Livro[]) => {
+        this.livros = livros;
+      },
+      (error: any) => {
+        console.error(error);
+      }
+    );
   }
 
   onSubmit(){
@@ -50,7 +67,7 @@ export class LivroComponent implements OnInit {
     });
   }
 
-  close(content: any) {
+  close() {
     this.modalService.dismissAll()
-      };
+  };
 }
