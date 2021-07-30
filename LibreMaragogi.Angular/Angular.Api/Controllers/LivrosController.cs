@@ -25,18 +25,10 @@ namespace libre_api.Controllers
             this.env = env;
         }
 
-        [HttpGet("GetLivros")]
-        [Authorize(Policy = Policies.User)]
+        [HttpGet]
         public IActionResult Get()
         {
             return Ok(db.Livros.ToList());
-        }
-
-        [HttpGet("GetUsuarios")]
-        [Authorize(Policy = Policies.Admin)]
-        public IActionResult GetUsers()
-        {
-            return Ok(db.Usuarios.ToList());
         }
 
         [HttpGet("campo")]
